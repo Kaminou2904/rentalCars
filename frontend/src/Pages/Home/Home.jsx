@@ -14,9 +14,22 @@ function Home() {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedDatee, setSelectedDatee] = useState(new Date());
     const [showSDate, setShowSDate] = useState(false);
+    const [datepickers, setDatepickers] = useState(false);
     const [showEDate, setEhowSDate] = useState(false);
+    const [datepickere, setDatepickere] = useState(false);
     // const [cityName, setCityName] = useState('');
     const [activeMainTab, setActiveMainTab] = useState(0);
+
+    const startDateClick = ()=>{
+        setShowSDate(true);
+        setDatepickers(true);
+        setDatepickere(false);
+    }
+    const endDateClick = ()=>{
+        setEhowSDate(true);
+        setDatepickers(false);
+        setDatepickere(true);
+    }
 
     return (
         <div className='main'>
@@ -37,32 +50,34 @@ function Home() {
                             {/* <input type="text" className="form-control shadow-none border-bottom border-primary rounded-0 outline-none border-0" placeholder='Enter Your City' value={cityName} onChange={(e)=> setCityName(e.target.value)}/> */}
                             <div className="dateInputs d-flex justify-content-around mt-0">
                                 <div className="startDate text-center">
-                                    <button className="pickUpDateBtn btn btn-primary mt-2 fs-4 text-nowrap" onClick={() => setShowSDate(true)}>Start Date</button>
+                                    <button className="pickUpDateBtn btn btn-primary mt-2 fs-4 text-nowrap" onClick={startDateClick}>Start Date</button>
                                     {
                                         showSDate && (
                                             <DatePicker
                                                 selected={selectedDate}
-                                                onChange={date => setSelectedDate(date)}
+                                                onChange={date => {setSelectedDate(date); setDatepickers(false)}}
                                                 minDate={new Date()}
                                                 dateFormat="dd/MM/yyyy"
                                                 showYearDropdown
                                                 scrollableMonthYearDropdown
+                                                open={datepickers}
                                                 className='startDateInpu mt-2 ebrima-regular p-1 br1 border border-dark text-center'
                                             />
                                         )
                                     }
                                 </div>
                                 <div className="endDate text-center">
-                                    <button className="pickUpDateBtn btn btn-primary mt-2 fs-4 text-nowrap" onClick={() => setEhowSDate(true)}>End Date</button>
+                                    <button className="pickUpDateBtn btn btn-primary mt-2 fs-4 text-nowrap" onClick={endDateClick}>End Date</button>
                                     {
                                         showEDate && (
                                             <DatePicker
                                                 selected={selectedDatee}
-                                                onChange={date => setSelectedDatee(date)}
+                                                onChange={date => {setSelectedDatee(date); setDatepickere(false)}}
                                                 minDate={new Date()}
                                                 dateFormat="dd/MM/yyyy"
                                                 showYearDropdown
                                                 scrollableMonthYearDropdown
+                                                open={datepickere}
                                                 className='endDateInpu mt-2 ebrima-regular p-1 br1 border border-dark text-center'
                                             />
                                         )
