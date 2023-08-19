@@ -1,0 +1,13 @@
+.basicCard{
+    width: min(280px, 400px);
+    background-color: rgb(208 241 253);
+}
+
+.basicName{
+    font-size: 18px;
+    line-height: 19px;
+}
+
+.basicTab{
+    font-size: 10px;
+}

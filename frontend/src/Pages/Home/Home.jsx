@@ -7,6 +7,7 @@ import Bannercard from '../../Components/Bannercard/Bannercard';
 import Flexcard from '../../Components/Flexcard/Flexcard';
 import Happycard from '../../Components/Happycard/Happycard';
 import Listingcard from '../../Components/Listingcard/Listingcard';
+import Basiccard from '../../Components/Basiccard/Basiccard';
 
 function Home() {
 
@@ -91,14 +92,28 @@ function Home() {
                 </div>
 
 
+                <div className="basicCars container">
+                    <p className="basicCarHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                        Our Basic Cars
+                    </p>
+                    <div className="basicCardWraper wraper">
+                        <div className="basicCardWrap wrap">
+                            <Basiccard/>
+                            <Basiccard/>
+                            <Basiccard/>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div className="listings container">
-                <p className="listingHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                    <p className="listingHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
                         Our Luxury Cars
                     </p>
                     <div className="listingWraper">
-                        <Listingcard/>
-                        <Listingcard/>
-                        <Listingcard/>
+                        <Listingcard />
+                        <Listingcard />
+                        <Listingcard />
                     </div>
                 </div>
 
