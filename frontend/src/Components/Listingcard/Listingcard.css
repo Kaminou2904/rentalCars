@@ -28,8 +28,8 @@
 }
 
 .ratingSpan{
-    font-size: 12px !important;
-    background-color: rgb(222, 245, 255);
+    font-size: 15px !important;
+    /* background-color: rgb(222, 245, 255); */
 }
 
 .priceSpan{
