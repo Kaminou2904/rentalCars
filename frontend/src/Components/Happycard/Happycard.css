@@ -1,0 +1,8 @@
+.happyCard{
+    width: min(200px, 300px);
+}
+
+.review{
+    font-size: 12px;
+    line-height: 14px;
+}

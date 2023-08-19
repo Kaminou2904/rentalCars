@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'ebrima-regular';
+    src: url('../fonts/Ebrima-Regular.ttf');
+}
+@font-face {
+    font-family: 'ebrima-bold';
+    src: url('../fonts/Ebrima-Bold.ttf');
+}
+@font-face {
+    font-family: 'roboto-thin';
+    src: url('../fonts/Roboto-Thin.ttf');
+}
+@font-face {
+    font-family: 'roboto-thinIt';
+    src: url('../fonts/Roboto-ThinItalic.ttf');
+}
+@font-face {
+    font-family: 'roboto-light';
+    src: url('../fonts/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: 'roboto-lightIt';
+    src: url('../fonts/Roboto-LightItalic.ttf');
+}
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'roboto-regularIt';
+    src: url('../fonts/Roboto-Italic.ttf');
+}
+@font-face {
+    font-family: 'roboto-medium';
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: 'roboto-mediumIt';
+    src: url('../fonts/Roboto-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'roboto-bold';
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'roboto-boldIt';
+    src: url('../fonts/Roboto-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'roboto-extrabold';
+    src: url('../fonts/Roboto-Black.ttf');
+}
+@font-face {
+    font-family: 'roboto-extraboldIt';
+    src: url('../fonts/Roboto-BlackItalic.ttf');
+}
+
+.ebrima-regular{
+    font-family: 'ebrima-regular', sans-serif !important;
+}
+.ebrima-bold{
+    font-family: 'ebrima-bold', sans-serif !important;
+}
+.roboto-thin{
+    font-family: 'roboto-thin', sans-serif !important;
+}
+.roboto-thinIt{
+    font-family: 'roboto-thinIt', sans-serif !important;
+}
+.roboto-light{
+    font-family: 'roboto-light', sans-serif !important;
+}
+.roboto-lightIt{
+    font-family: 'roboto-lightIt', sans-serif !important;
+}
+.roboto-regular{
+    font-family: 'roboto-regular', sans-serif !important;
+}
+.roboto-regularIt{
+    font-family: 'roboto-regularIt', sans-serif !important;
+}
+.roboto-medium{
+    font-family: 'roboto-medium', sans-serif !important;
+}
+.roboto-mediumIt{
+    font-family: 'roboto-mediumIt', sans-serif !important;
+}
+.roboto-bold{
+    font-family: 'roboto-bold', sans-serif !important;
+}
+.roboto-boldIt{
+    font-family: 'roboto-boldIt', sans-serif !important;
+}
+.roboto-extrabold{
+    font-family: 'roboto-extrabold', sans-serif !important;
+}
+.roboto-extraboldIt{
+    font-family: 'roboto-extraboldIt', sans-serif !important;
+}

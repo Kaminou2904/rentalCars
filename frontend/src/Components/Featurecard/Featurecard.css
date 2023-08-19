@@ -1,0 +1,20 @@
+.featCard{
+    width: min(200px, 400px);
+}
+
+.headTab{
+    font-size: 12px;
+}
+
+.cardBodyTitle{
+    line-height: 20px;
+}
+
+.cardBodyDesc{
+    font-size: 12px !important;
+    line-height: 12px;
+}
+
+.cardLinkP{
+    font-size: 14px;
+}

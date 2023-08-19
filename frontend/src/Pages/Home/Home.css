@@ -1,0 +1,141 @@
+.main{
+    background-color: rgb(122, 183, 210);
+}
+
+.headerTxt{
+    color: rgb(210, 242, 255);
+}
+
+.mainTab{
+    width: min(30%, 150px);
+    height: 40px;
+}
+
+.activeMainTab{
+    background-color: rgb(210, 242, 255) !important;
+    color: rgb(77, 77, 77) !important;
+    border: 2px solid white;
+}
+
+.activeMainTab::after{
+    content: '';
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 36%;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    z-index: 10;
+}
+
+.startDate, .endDate{
+    width: 40%;
+}
+
+.startDateInpu, .endDateInpu{
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    border: 0px;
+}
+
+.mainBody{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: rgb(235, 249, 255);
+    min-height: 50vh;
+}
+
+.featureWraper{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.featureWraper::-webkit-scrollbar{
+    display: none;
+}
+
+.featCardWrap{
+    width: max-content;
+}
+
+.bannerWraper{
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.bannerWraper::-webkit-scrollbar{
+    display: none;
+}
+
+.bannerWrap{
+    display: flex;
+    width: max-content;
+}
+
+.whyWraper{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.whyWraper::-webkit-scrollbar{
+    display: none;
+}
+
+.whyWrap{
+    width: max-content;
+}
+
+/* listing Card Styling */
+
+.listingCard{
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(208 241 253);
+}
+
+.listingCardImg{
+    width: 53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.listingCardImg img{
+    height: 100% !important;
+}
+
+.listingCardName{
+    font-size: 18px;
+    line-height: 19px;
+}
+
+.ratingP{
+    font-size: 12px !important;
+}
+
+.ratingSpan{
+    font-size: 12px !important;
+    background-color: rgb(222, 245, 255);
+}
+
+.priceSpan{
+    font-size: 12px !important;
+    line-height: 12px ;
+}
+
+.listingCardBtn{
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.listingTab{
+    font-size: 10px;
+}

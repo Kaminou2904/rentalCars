@@ -1,0 +1,12 @@
+.whyCard{
+    width: min(250px, 400px);
+}
+
+.whyTitle{
+    line-height: 18px;
+}
+
+.whyDesc{
+    font-size: 12px;
+    line-height: 14px;
+}
