@@ -97,7 +97,7 @@ function Home() {
                                 <img src="./images/carImg.webp" alt="" className="br2" />
                             </div>
                             <div className="listingCardData ps-3 py-1">
-                                <p className="listingCardName mb-0 ebrima-bold">Mercedes E53 Convertible</p>
+                                <p className="listingCardName mb-0 ebrima-bold">Mercedes E53</p>
                                 <div className="ratingDiv">
                                     <p className="ratingP d-flex align-items-center text-muted ebrima-regular mb-0">
                                         <span className="ratingSpan px-2 text-center rounded-pill text-dark ebrima-bold me-1">
