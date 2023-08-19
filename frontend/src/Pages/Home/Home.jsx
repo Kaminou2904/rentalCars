@@ -6,6 +6,7 @@ import Featurecard from '../../Components/Featurecard/Featurecard';
 import Bannercard from '../../Components/Bannercard/Bannercard';
 import Flexcard from '../../Components/Flexcard/Flexcard';
 import Happycard from '../../Components/Happycard/Happycard';
+import Listingcard from '../../Components/Listingcard/Listingcard';
 
 function Home() {
 
@@ -91,35 +92,13 @@ function Home() {
 
 
                 <div className="listings container">
+                <p className="listingHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                        Our Luxury Cars
+                    </p>
                     <div className="listingWraper">
-                        <div className="listingCard d-flex mt-3 br2 p-1">
-                            <div className="listingCardImg m-1 me-0">
-                                <img src="./images/carImg.webp" alt="" className="br2" />
-                            </div>
-                            <div className="listingCardData ps-3 py-1">
-                                <p className="listingCardName mb-0 ebrima-bold">Mercedes E53</p>
-                                <div className="ratingDiv">
-                                    <p className="ratingP d-flex align-items-center text-muted ebrima-regular mb-0">
-                                        <span className="ratingSpan px-2 text-center rounded-pill text-dark ebrima-bold me-1">
-                                            <i className="fas fa-star text-warning"></i> 4.5
-                                        </span>
-                                        382 Trips
-                                    </p>
-                                </div>
-                                <p className="listingCardPrice d-flex flex-column mb-0 ebrima-bold">
-                                    ₹29,999 /Hour
-                                    <span className="priceSpan text-muted">8 hrs 80 kms</span>
-                                </p>
-                                <button className="listingCardBtn btn btn-primary mt-3 py-1 px-4 ">
-                                    View Details
-                                </button>
-                                <div className="listingTabs d-flex mt-1">
-                                    <p className="listingTab mb-0 text-muted me-3">Petrol</p>
-                                    <p className="listingTab mb-0 text-muted me-3">Menual</p>
-                                    <p className="listingTab mb-0 text-muted me-3">5 seater</p>
-                                </div>
-                            </div>
-                        </div>
+                        <Listingcard/>
+                        <Listingcard/>
+                        <Listingcard/>
                     </div>
                 </div>
 

@@ -1,0 +1,47 @@
+.listingCard{
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(208 241 253);
+}
+
+.listingCardImg{
+    width: 53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.listingCardImg img{
+    height: 100% !important;
+}
+
+.listingCardName{
+    font-size: 18px;
+    line-height: 19px;
+}
+
+.ratingP{
+    font-size: 12px !important;
+}
+
+.ratingSpan{
+    font-size: 12px !important;
+    background-color: rgb(222, 245, 255);
+}
+
+.priceSpan{
+    font-size: 12px !important;
+    line-height: 12px ;
+}
+
+.listingCardBtn{
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.listingTab{
+    font-size: 10px;
+}
