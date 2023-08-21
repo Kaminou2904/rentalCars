@@ -1,5 +1,6 @@
 import React from 'react';
 import './Basiccard.css';
+import { Link } from 'react-router-dom';
 
 function Basiccard() {
     return (
@@ -10,7 +11,7 @@ function Basiccard() {
             <div className="basicCardData p-2">
                 <div className="nameNRating d-flex justify-content-between align-items-start">
                     <div className="basicNameWrap">
-                        <p className="basicName mb-0 ebrima-bold">Toyota Fortuner</p>
+                        <Link to='/detail' className='nav-link'><p className="basicName mb-0 ebrima-bold">Toyota Fortuner</p></Link>
                         <div className="basicTabs d-flex">
                             <p className="basicTab mb-0 text-muted me-2">Petrol</p>
                             <p className="basicTab mb-0 text-muted me-2">Manual</p>
