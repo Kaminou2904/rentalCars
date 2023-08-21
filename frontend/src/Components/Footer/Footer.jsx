@@ -15,7 +15,7 @@ function Footer() {
                 <a href="#cars" className="footerLink nav-link brandP urbanist-black border-end px-2">Cars</a>
                 <a href="#contact" className="footerLink nav-link brandP urbanist-black px-2">Contact Us</a>
             </div>
-            <p className="mb-0 mt-3 text-muted jakarta-extrabold text-center">&copy; 2023 Scalemax.in</p>
+            <p className="mb-0 mt-3 text-muted jakarta-extrabold text-center">&copy; 2023 Caronrent.co</p>
             <div className="footerInfo container p-0 d-flex justify-content-center flex-wrap mt-4">
                 <div className="footerCard text-center  p-2">
                     <p className="cardHead mb-0 urbanist-black"><a href="tel:+918928060714" className="nav-link"><i className="fas fa-phone-alt fs-1 mb-1 text-primary"></i></a></p>
