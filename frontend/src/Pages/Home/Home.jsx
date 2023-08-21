@@ -36,7 +36,7 @@ function Home() {
     }
 
     return (
-        <div className='main'>
+        <div className='main' id='home'>
             <div className="mainHead py-2 pt-3">
                 <div className="mainHeadWrap">
                     {/* <h2 className="rentalLogo text-white urbanist-black text-center fs-1 mb-0">CaronRent</h2> */}
@@ -107,6 +107,15 @@ function Home() {
                 </div>
             </div>
 
+            <div className="aboutDiv mt-5" id="about">
+                <p className="aboutHead mb-0 text-black fs-4 urbanist-bold mb-0 pt-2 text-center">
+                    Welcome to CarOnRent
+                </p>
+                <p className="aboutTxt text-center lh-sm text-muted px-2 mb-0 urbanist-semibold">
+                    Your Destination for Hassle-Free Car Rentals! Explore our wide range of rental cars and hit the road with ease.
+                </p>
+            </div>
+
             <div className="mainBody pt-3 mt-5 pb-5">
                 <div className="featureDiv container">
                     <p className="featHead mb-0 text-secondary fs-4 urbanist-bold mb-1">
@@ -122,7 +131,7 @@ function Home() {
                 </div>
 
 
-                <div className="basicCars container">
+                <div id='cars' className="basicCars container">
                     <p className="basicCarHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
                         Our Basic Cars
                     </p>

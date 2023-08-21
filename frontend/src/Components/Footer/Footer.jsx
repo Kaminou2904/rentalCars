@@ -3,7 +3,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <div className='mainFooter bg-white'>
+    <div id='contact' className='mainFooter bg-white'>
         <div className="footerDiv">
             <div className="footerWrap pt-5">
             <div className="footerLogo container">
@@ -12,7 +12,7 @@ function Footer() {
             <div className="quickLinks d-flex justify-content-center align-items-center pt-4">
                 <a href="#home" className="footerLink nav-link brandP urbanist-black border-end px-2">Home</a>
                 <a href="#about" className="footerLink nav-link brandP urbanist-black border-end px-2">About</a>
-                <a href="#services" className="footerLink nav-link brandP urbanist-black border-end px-2">Services</a>
+                <a href="#cars" className="footerLink nav-link brandP urbanist-black border-end px-2">Cars</a>
                 <a href="#contact" className="footerLink nav-link brandP urbanist-black px-2">Contact Us</a>
             </div>
             <p className="mb-0 mt-3 text-muted jakarta-extrabold text-center">&copy; 2023 Scalemax.in</p>
