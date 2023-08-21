@@ -1,0 +1,23 @@
+.footerLogo{
+    width: min(50%, 400px) !important;
+}
+
+.footerLink{
+    border-color: #481448 !important;
+}
+
+.footerCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: max(300px, 30%);
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(235, 249, 255);
+}
+
+.footerAboutP{
+    font-size: 14px;
+    line-height: 15px;
+}

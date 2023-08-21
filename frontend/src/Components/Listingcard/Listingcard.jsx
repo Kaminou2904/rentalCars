@@ -8,16 +8,16 @@ function Listingcard() {
                 <img src="./images/carImg.webp" alt="" className="br2" />
             </div>
             <div className="listingCardData ps-3 py-1">
-                <p className="listingCardName mb-0 ebrima-bold">Mercedes E53</p>
+                <p className="listingCardName mb-0 urbnaist-bold">Mercedes E53</p>
                 <div className="ratingDiv">
-                    <p className="ratingP d-flex align-items-center text-muted ebrima-regular mb-0 p-0 m-0">
-                        <span className="ratingSpan  text-center rounded-pill text-dark ebrima-bold me-1 mb-0">
+                    <p className="ratingP d-flex align-items-center text-muted  mb-0 p-0 m-0">
+                        <span className="ratingSpan  text-center rounded-pill text-dark urbanist-bold me-1 mb-0">
                             <i className="fas fa-star text-warning"></i> 4.5
                         </span>
                         382 Trips
                     </p>
                 </div>
-                <p className="listingCardPrice d-flex flex-column mb-0 ebrima-bold">
+                <p className="listingCardPrice d-flex flex-column mb-0 urbanist-bold">
                     ₹29,999 /Hour
                     <span className="priceSpan text-muted">8 hrs 80 kms</span>
                 </p>

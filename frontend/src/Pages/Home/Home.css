@@ -1,23 +1,41 @@
-.main{
+/* .main{
     background-color: rgb(122, 183, 210);
+} */
+
+.logoWrap{
+    width: min(50%, 300px);
+    margin: auto;
 }
 
 .headerTxt{
     color: rgb(210, 242, 255);
 }
 
+.heroMain{
+    background-image: url('../../../public/images/carImg.webp');
+}
+
+.hero{
+    background-color: #1f4f964e;
+    height: 226px !important;
+}
+
 .mainTab{
     width: min(30%, 150px);
     height: 40px;
+    border: 1px solid white;
+    background-color: #53B7E3 !important;
+    color: white !important;
+    font-family: 'urbanist-semibold', sans-serif;
 }
 
 .activeMainTab{
-    background-color: rgb(210, 242, 255) !important;
-    color: rgb(77, 77, 77) !important;
+    background-color: white !important;
+    color: #0d6efd !important;
     border: 2px solid white;
 }
 
-.activeMainTab::after{
+/* .activeMainTab::after{
     content: '';
     display: block;
     position: relative;
@@ -29,10 +47,21 @@
     border-right: 10px solid transparent;
     border-top: 10px solid white;
     z-index: 10;
-}
+} */
 
 .startDate, .endDate{
     width: 40%;
+    overflow-x: hidden;
+}
+
+.tab{
+    width: 30% !important;
+    height: max-content !important;
+    margin-bottom: 0px !important;
+}
+
+.dateInputs{
+    margin-top: 60px !important;
 }
 
 .startDateInpu, .endDateInpu{
@@ -40,12 +69,14 @@
     box-shadow: none;
     width: 100%;
     border: 0px;
-    background: transparent;
-    color: white;
-    font-size: 18px;
-    border: 0px !important;
-    padding: 0px !important;
+    color: black;
+    font-size: 14px !important;
+    border-radius: 10px !important;
     margin: 0px !important;
+}
+
+.pickUpDateBtn{
+    font-size: 14px !important;
 }
 
 .mainBody{

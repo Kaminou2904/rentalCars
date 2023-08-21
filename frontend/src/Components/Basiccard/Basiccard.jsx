@@ -11,7 +11,7 @@ function Basiccard() {
             <div className="basicCardData p-2">
                 <div className="nameNRating d-flex justify-content-between align-items-start">
                     <div className="basicNameWrap">
-                        <Link to='/detail' className='nav-link'><p className="basicName mb-0 ebrima-bold">Toyota Fortuner</p></Link>
+                        <Link to='/detail' className='nav-link'><p className="basicName mb-0 urbanist-bold">Toyota Fortuner</p></Link>
                         <div className="basicTabs d-flex">
                             <p className="basicTab mb-0 text-muted me-2">Petrol</p>
                             <p className="basicTab mb-0 text-muted me-2">Manual</p>
@@ -19,8 +19,8 @@ function Basiccard() {
                         </div>
                     </div>
                     <div className="basicRating">
-                        <p className="ratingP d-flex align-items-center text-muted ebrima-regular mb-0 p-0 m-0">
-                            <span className="ratingSpan  text-center rounded-pill text-dark ebrima-bold me-1 mb-0">
+                        <p className="ratingP d-flex align-items-center text-muted  mb-0 p-0 m-0">
+                            <span className="ratingSpan  text-center rounded-pill text-dark urbanist-bold me-1 mb-0">
                                 <i className="fas fa-star text-warning"></i> 4.5
                             </span>
                             382 Trips
@@ -28,7 +28,7 @@ function Basiccard() {
                     </div>
                 </div>
                 <div className="priceWrap d-flex justify-content-between align-items-end mt-2">
-                    <p className="listingCardPrice d-flex flex-column mb-0 ebrima-bold">
+                    <p className="listingCardPrice d-flex flex-column mb-0 urbanist-bold">
                         ₹29,999 /Hour
                         <span className="priceSpan text-muted">8 hrs 80 kms</span>
                     </p>

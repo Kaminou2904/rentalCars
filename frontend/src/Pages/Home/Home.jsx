@@ -38,24 +38,33 @@ function Home() {
     return (
         <div className='main'>
             <div className="mainHead py-2 pt-3">
-                <div className="mainHeadWrap container">
-                    <h2 className="rentalLogo text-white ebrima-bold text-center fs-1 mb-0">CaronRent</h2>
-                    <p className="headerTxt text-center ebrima-regular">Electric Cars on Rent in India</p>
-                    <div className="mainTabs">
-                        <div className="mainTabWrap d-flex justify-content-around align-items-center mt-4">
-                            <div className={`mainTab ebrima-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 0 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(0)}>Basic</div>
-                            <div className={`mainTab ebrima-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 1 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(1)}>Premium</div>
-                            <div className={`mainTab ebrima-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Luxury</div>
+                <div className="mainHeadWrap">
+                    {/* <h2 className="rentalLogo text-white urbanist-black text-center fs-1 mb-0">CaronRent</h2> */}
+                    <div className="logoWrap mx-auto mt-3">
+                        <img src="./images/CARONRENT LOGO.png" className='img-fluid' alt="" />
+                    </div>
+                    {/* <p className="headerTxt text-center urbanist-light">Electric Cars on Rent in India</p> */}
+                    <div className="heroMain mt-3">
+                    {/* <video autoPlay muted loop playsInline className='img-fluid mt-3'>
+                        <source src='./images/Car On Rent Video.m4v'/>
+                    </video> */}
+                    <div className="hero pt-1">
+                    <div className="mainTabs container mt-2">
+                        <div className="mainTabWrap d-flex justify-content-around align-items-center">
+                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 0 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(0)}>Basic</div>
+                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 1 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(1)}>Premium</div>
+                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Luxury</div>
                         </div>
                     </div>
 
-                    <div className="form mt-4 bg-white br1 p-3">
+                    <div className="form mt-4 br1 p-3">
                         <div className="formWrap">
-                            {/* <input type="text" className="form-control shadow-none border-bottom border-primary rounded-0 outline-none border-0" placeholder='Enter Your City' value={cityName} onChange={(e)=> setCityName(e.target.value)}/> */}
-                            <div className="dateInputs d-flex justify-content-around mt-0">
-                                <div className="startDate text-center">
-                                    <div className="pickUpDateBtn btn btn-primary mt-2 fs-4 text-nowrap" onClick={startDateClick}>
-                                        {showSDate ? (
+                            <div className="dateInputs bg-brand2 rounded-3 p-2 d-flex justify-content-between align-items-center mt-5">
+                                <div className="locationTab tab mx-0 mb-0">
+                                    <p className="locationTabP w-100 py-1 mb-0 btn btn-light text-nowrap"><i className="fas fa-map-marker-alt me-1 brand-color"></i>Mumbai</p>
+                                </div>
+                                <div className="startDate text-center tab">
+                                    {showSDate ? (
                                             <DatePicker
                                                 selected={selectedDate}
                                                 onChange={dateSonchange}
@@ -63,16 +72,14 @@ function Home() {
                                                 dateFormat="dd/MM/yyyy"
                                                 showYearDropdown
                                                 scrollableMonthYearDropdown
-                                                className='startDateInpu mt-2 ebrima-regular p-1 br1 border border-dark text-center'
+                                                className='startDateInpu btn btn-light border-0 rounded-3 mt-2 urbanist-regular fs-6 br1 text-center'
                                                 open={datepickers}
                                             />
-                                        ) : 'Start Date'
+                                        ): <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={startDateClick}>Start Date</span>
                                         }
-                                    </div>
                                 </div>
-                                <div className="endDate text-center">
-                                    <div className="pickUpDateBtn btn btn-primary mt-2 fs-4 text-nowrap" onClick={endDateClick}>
-                                        {showEDate ? (
+                                <div className="endDate text-center tab">
+                                    {showEDate ? (
                                             <DatePicker
                                                 selected={selectedDatee}
                                                 onChange={date => {
@@ -84,24 +91,25 @@ function Home() {
                                                 showYearDropdown
                                                 scrollableMonthYearDropdown
                                                 open={datepickere}
-                                                className='endDateInpu mt-2 ebrima-regular p-1 br1 border border-dark text-center'
+                                                className='endDateInpu btn btn-light border-0 rounded-3 mt-2 urbanist-regular fs-6 br1 text-center'
                                             />
-                                        ) : 'End Date'
+                                        ): <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={endDateClick}>End Date</span>
                                         }
-                                    </div>
                                 </div>
                             </div>
-                            <div className="searchBtn text-center mt-3">
-                                <button className="searchBtn btn btn-primary rounded-pill text-center fs-4 ebrima-regular w-100">Search</button>
+                            <div className="searchBtn text-center mt-2">
+                                <button className="searchBtn btn btn-primary bg-brand2 border-0 rounded-pill text-center fs-4 urbanist-regular w-75">Search</button>
                             </div>
                         </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
 
-            <div className="mainBody pt-3 mt-3">
+            <div className="mainBody pt-3 mt-5 pb-5">
                 <div className="featureDiv container">
-                    <p className="featHead mb-0 text-secondary fs-4 ebrima-bold mb-1">
+                    <p className="featHead mb-0 text-secondary fs-4 urbanist-bold mb-1">
                         Features
                     </p>
                     <div className="featureWraper">
@@ -115,7 +123,7 @@ function Home() {
 
 
                 <div className="basicCars container">
-                    <p className="basicCarHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                    <p className="basicCarHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
                         Our Basic Cars
                     </p>
                     <div className="basicCardWraper wraper">
@@ -129,7 +137,7 @@ function Home() {
 
 
                 <div className="listings container">
-                    <p className="listingHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                    <p className="listingHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
                         Our Luxury Cars
                     </p>
                     <div className="listingWraper">
@@ -142,7 +150,7 @@ function Home() {
 
 
                 <div className="banner container">
-                    <p className="bannerHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                    <p className="bannerHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
                         Our Loved Ones
                     </p>
                     <div className="bannerWraper">
@@ -155,7 +163,7 @@ function Home() {
                 </div>
 
                 <div className="why container mt-4">
-                    <p className="whyHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                    <p className="whyHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
                         Why Us?
                     </p>
                     <div className="whyWraper">
@@ -168,7 +176,7 @@ function Home() {
                 </div>
 
                 <div className="faq container mt-4">
-                    <p className="happyHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                    <p className="happyHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
                         FAQs
                     </p>
                     <div className="faqWraper">
@@ -176,7 +184,7 @@ function Home() {
                             <div className="accordion accordion-flush" id="accordionFlushExample">
                                 <div className="accordion-item br1 mb-1">
                                     <h2 className="accordion-header">
-                                        <button className="accordion-button collapsed ebrima-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <button className="accordion-button collapsed urbanist-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                             Is there a speed limit?
                                         </button>
                                     </h2>
@@ -186,7 +194,7 @@ function Home() {
                                 </div>
                                 <div className="accordion-item br1 mb-1">
                                     <h2 className="accordion-header">
-                                        <button className="accordion-button collapsed ebrima-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        <button className="accordion-button collapsed urbanist-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                             Can I extend/ cancle/ modify?
                                         </button>
                                     </h2>
@@ -196,7 +204,7 @@ function Home() {
                                 </div>
                                 <div className="accordion-item br1 mb-1">
                                     <h2 className="accordion-header">
-                                        <button className="accordion-button collapsed ebrima-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <button className="accordion-button collapsed urbanist-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                             Booking criteria and documents?
                                         </button>
                                     </h2>
@@ -210,7 +218,7 @@ function Home() {
                 </div>
 
                 <div className="happyCustomer container">
-                    <p className="happyHead mb-0 text-secondary fs-4 ebrima-bold mb-1 mt-4">
+                    <p className="happyHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
                         Happy Customers
                     </p>
                     <div className="happyWraper wraper">

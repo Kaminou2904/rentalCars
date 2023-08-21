@@ -97,3 +97,118 @@
 .roboto-extraboldIt{
     font-family: 'roboto-extraboldIt', sans-serif !important;
 }
+
+/* urbanist font */
+@font-face {
+    font-family: 'urbanist-black';
+    src: url('../fonts/Urbanist-Black.ttf');
+}
+@font-face {
+    font-family: 'urbanist-blackIt';
+    src: url('../fonts/Urbanist-BlackItalic.ttf');
+}
+@font-face {
+    font-family: 'urbanist-bold';
+    src: url('../fonts/Urbanist-Bold.ttf');
+}
+@font-face {
+    font-family: 'urbanist-boldIt';
+    src: url('../fonts/Urbanist-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'urbanist-semibold';
+    src: url('../fonts/Urbanist-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'urbanist-semiboldIt';
+    src: url('../fonts/Urbanist-SemiBoldItalic.ttf');
+}
+@font-face {
+    font-family: 'urbanist-medium';
+    src: url('../fonts/Urbanist-Medium.ttf');
+}
+@font-face {
+    font-family: 'urbanist-mediumIt';
+    src: url('../fonts/Urbanist-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'urbanist-regular';
+    src: url('../fonts/Urbanist-Regular.ttf');
+}
+@font-face {
+    font-family: 'urbanist-regularIt';
+    src: url('../fonts/Urbanist-Italic.ttf');
+}
+@font-face {
+    font-family: 'urbanist-light';
+    src: url('../fonts/Urbanist-Light.ttf');
+}
+@font-face {
+    font-family: 'urbanist-lightIt';
+    src: url('../fonts/Urbanist-LightItalic.ttf');
+}
+@font-face {
+    font-family: 'urbanist-extralight';
+    src: url('../fonts/Urbanist-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'urbanist-extralightIt';
+    src: url('../fonts/Urbanist-ExtraLightItalic.ttf');
+}
+@font-face {
+    font-family: 'urbanist-thin';
+    src: url('../fonts/Urbanist-Thin.ttf');
+}
+@font-face {
+    font-family: 'urbanist-extralightIt';
+    src: url('../fonts/Urbanist-ThinItalic.ttf');
+}
+
+.urbanist-black{
+    font-family: 'urbanist-black', sans-serif !important;
+}
+.urbanist-blackIt{
+    font-family: 'urbanist-blackIt', sans-serif !important;
+}
+.urbanist-bold{
+    font-family: 'urbanist-bold', sans-serif !important;
+}
+.urbanist-boldIt{
+    font-family: 'urbanist-boldIt', sans-serif !important;
+}
+.urbanist-semibold{
+    font-family: 'urbanist-semibold', sans-serif !important;
+}
+.urbanist-semibold{
+    font-family: 'urbanist-semiboldIt', sans-serif !important;
+}
+.urbanist-medium{
+    font-family: 'urbanist-medium', sans-serif !important;
+}
+.urbanist-mediumIt{
+    font-family: 'urbanist-mediumIt', sans-serif !important;
+}
+.urbanist-regular{
+    font-family: 'urbanist-regular', sans-serif !important;
+}
+.urbanist-regularIt{
+    font-family: 'urbanist-regularIt', sans-serif !important;
+}
+.urbanist-light{
+    font-family: 'urbanist-light', sans-serif !important;
+}
+.urbanist-lightIt{
+    font-family: 'urbanist-lightIt', sans-serif !important;
+}
+.urbanist-extralight{
+    font-family: 'urbanist-extralight', sans-serif !important;
+}
+.urbanist-extralightIt{
+    font-family: 'urbanist-extralightIt', sans-serif !important;
+}
+.urbanist-thin{
+    font-family: 'urbanist-thin', sans-serif !important;
+}
+.urbanist-thinIt{
+    font-family: 'urbanist-thinIt', sans-serif !important;
+}
