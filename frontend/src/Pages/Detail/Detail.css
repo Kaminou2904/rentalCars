@@ -1,0 +1,46 @@
+.mainImg{
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    padding: 10px;
+}
+
+.featTxt{
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.ratingTxt{
+    font-size: 13px;
+}
+
+.ratingSpan{
+    font-size: 10px !important;
+}
+
+.ratingSpan i{
+    column-rule: gold !important;
+}
+
+.bookingCard{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.startTxt, .endTxt{
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.startDateDate, .endDateDate{
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.totalDays{
+    font-size: 17px;
+}
+
+.cardDesc{
+    font-size: 14px;
+    line-height: 16px;
+}
