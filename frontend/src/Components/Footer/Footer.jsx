@@ -19,7 +19,7 @@ function Footer() {
             <div className="footerInfo container p-0 d-flex justify-content-center flex-wrap mt-4">
                 <div className="footerCard text-center  p-2">
                     <p className="cardHead mb-0 urbanist-black"><a href="tel:+918928060714" className="nav-link"><i className="fas fa-phone-alt fs-1 mb-1 text-primary"></i></a></p>
-                    <p className="mb-0 footerCardP"><a href="tel:+918928060714" className="nav-link brandP urbanist-black text-nowrap">+91 96197 97272</a></p>
+                    <p className="mb-0 footerCardP"><a href="tel:+918928060714" className="nav-link brandP urbanist-black text-nowrap">+91 89280 60714</a></p>
                 </div>
                 <div className="footerCard text-center  p-2">
                     <p className="cardHead mb-0 urbanist-black"><span className="nav-link"><i className="fas fa-map-marker-alt fs-1 mb-1 text-primary"></i></span></p>
