@@ -8,6 +8,7 @@ import Flexcard from '../../Components/Flexcard/Flexcard';
 import Happycard from '../../Components/Happycard/Happycard';
 import Listingcard from '../../Components/Listingcard/Listingcard';
 import Basiccard from '../../Components/Basiccard/Basiccard';
+import Footer from '../../Components/Footer/Footer';
 
 function Home() {
 
@@ -239,6 +240,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

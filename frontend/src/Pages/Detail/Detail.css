@@ -59,9 +59,13 @@
     line-height: 18px;
 }
 
+.priceDetails{
+    list-style: none;
+}
+
 .floatBtnWrap{
     position: sticky;
-    bottom: 10px;
+    bottom: 0px;
     border: 0px !important;
 }
 

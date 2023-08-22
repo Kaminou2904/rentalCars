@@ -63,7 +63,7 @@ function Detail() {
             </div>
         </div>
 
-        <div className="policyWraper container pb-5">
+        <div className="policyWraper container ">
             <div className="policyWrap">
                 <div className="policyCard bg-brand mb-2 p-3 py-2">
                     <p className="policyCardHead urbanist-semibold fs-5 mb-0">
@@ -92,12 +92,20 @@ function Detail() {
             </div>
         </div>
 
-        <div className="floatBtnWrap container py-2">
-            <div className="floatBtn urbanist-light w-100 btn btn-primary rounded-pill fs-4">
+        <div className="floatBtnWrap container bg-white py-2">
+            <div className="popup">
+                <div className="popupWrap">
+                    <div className="mainPrice mb-0 urbanist-bold fs-4 mt-1">₹29,999</div>
+                    <div className="popupTitel bg-light rounded-3 p-2 py-1 urbanist-semibold fs-5">Fair Summary</div>
+                    <ul className="priceDetails ps-0 mt-2">
+                      <li className="priceLi text-muted urbanist-regular ls-2 border-bottom border-secondary d-flex justify-cotent-between mt-1">Trip Fair (Unlimited KMs without Fuel) <span className='priceLiSpan ms-auto urbanist-bold'>₹9,999</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div className="floatBtn urbanist-light w-100 btn btn-primary rounded-pill fs-4 mt-2">
                 Continue
             </div>
         </div>
-
     </div>
   )
 }
