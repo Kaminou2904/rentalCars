@@ -5,8 +5,8 @@ function Detail() {
   return (
     <div className='mainDetail'>
         
-        <div className="mainImg container-fluid d-flex justify-content-center align-items-center bg-brand br2 pt-4 rounded-top-0">
-            <img src="./images/carImg.webp" className='img-fluid br3' alt="car thum" />
+        <div className="mainImg container-fluid d-flex justify-content-center align-items-center bg-brand  p-0 rounded-top-0">
+            <img src="./images/carImg2.webp" className='img-fluid' alt="car thum" />
         </div>
 
         <div className="carData container">
@@ -36,7 +36,7 @@ function Detail() {
                         <p className="startTxt text-muted mb-0">Start Date</p>
                         <p className="startDateDate mb-0 urbanist-bold">21 Aug</p>
                     </div>
-                    <div className="totalDays bg-primary text-white text-center p-0 px-3 pb-1 rounded-pill ">
+                    <div className="totalDays bg-primary text-white text-center p-0 px-3 rounded-pill ">
                         3 Days
                     </div>
                     <div className="endDateCont text-end">
@@ -52,6 +52,50 @@ function Detail() {
             <p className="cardDesc text-secondary mb-0">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nobis, reprehenderit exercitationem obcaecati ipsa sed ut facilis ex voluptate in magni, fugit iste atque placeat!
             </p>
+            <div className="carFeatures">
+                <ul className='carFeatUl p-3 bg-light br3 mt-2'>
+                    <li className='carFeatLi urbanist-semibold fs-4'>Features</li>
+                    <li className='carFeatLi urbanist-medium'><i className="fas fa-voicemail me-2 text-primary"></i>Voice Control</li>
+                    <li className='carFeatLi urbanist-medium'><i className="fas fa-music me-2 text-primary"></i>Music System</li>
+                    <li className='carFeatLi urbanist-medium'><i className="fas fa-gamepad me-2 text-primary"></i>Cruise Control</li>
+                    <li className='carFeatLi urbanist-medium'><i className="fas fa-mouse me-2 text-primary"></i>Push Button Start</li>
+                </ul>
+            </div>
+        </div>
+
+        <div className="policyWraper container pb-5">
+            <div className="policyWrap">
+                <div className="policyCard bg-brand mb-2 p-3 py-2">
+                    <p className="policyCardHead urbanist-semibold fs-5 mb-0">
+                        <i className="fas fa-user-shield me-2 text-primary"></i>Saftey First
+                    </p>
+                    <p className="policyTxt text-muted mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reiciendis, quidem suscipit nulla dicta dolore.
+                    </p>
+                </div>
+                <div className="policyCard bg-brand mb-2 p-3 py-2">
+                    <p className="policyCardHead urbanist-semibold fs-5 mb-0">
+                        <i className="fas fa-user-shield me-2 text-primary"></i>Saftey First
+                    </p>
+                    <p className="policyTxt text-muted mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reiciendis, quidem suscipit nulla dicta dolore.
+                    </p>
+                </div>
+                <div className="policyCard bg-brand mb-2 p-3 py-2">
+                    <p className="policyCardHead urbanist-semibold fs-5 mb-0">
+                        <i className="fas fa-user-shield me-2 text-primary"></i>Saftey First
+                    </p>
+                    <p className="policyTxt text-muted mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reiciendis, quidem suscipit nulla dicta dolore.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div className="floatBtnWrap container py-2">
+            <div className="floatBtn urbanist-light w-100 btn btn-primary rounded-pill fs-4">
+                Continue
+            </div>
         </div>
 
     </div>

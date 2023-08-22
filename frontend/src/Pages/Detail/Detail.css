@@ -38,9 +38,33 @@
 
 .totalDays{
     font-size: 17px;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
 }
 
 .cardDesc{
     font-size: 14px;
     line-height: 16px;
+}
+
+.carFeatUl{
+    list-style: none;
+}
+
+.policyCard{
+    border-radius: 10px ;
+}
+
+.policyTxt{
+    line-height: 18px;
+}
+
+.floatBtnWrap{
+    position: sticky;
+    bottom: 10px;
+    border: 0px !important;
+}
+
+.floatBtn{
+    letter-spacing: 3px;
 }
