@@ -9,6 +9,7 @@ import Happycard from '../../Components/Happycard/Happycard';
 import Listingcard from '../../Components/Listingcard/Listingcard';
 import Basiccard from '../../Components/Basiccard/Basiccard';
 import Footer from '../../Components/Footer/Footer';
+import Data from '../../Data/Cars.json';
 
 function Home() {
 
@@ -36,6 +37,13 @@ function Home() {
         setDatepickers(false);
     }
 
+    const basicCars = Data.basic;
+    const luxuryCars = Data.luxury;
+    const sportCars = Data.sports;
+    console.log(sportCars);
+    console.log(luxuryCars);
+    console.log(basicCars);
+
     return (
         <div className='main' id='home'>
             <div className="mainHead py-2 pt-3">
@@ -53,8 +61,8 @@ function Home() {
                     <div className="mainTabs container mt-2">
                         <div className="mainTabWrap d-flex justify-content-around align-items-center">
                             <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 0 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(0)}>Basic</div>
-                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 1 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(1)}>Premium</div>
-                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Luxury</div>
+                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 1 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(1)}>Luxury</div>
+                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Sports</div>
                         </div>
                     </div>
 
@@ -134,13 +142,30 @@ function Home() {
 
                 <div id='cars' className="basicCars container">
                     <p className="basicCarHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
-                        Our Basic Cars
+                        Our Luxury Cars
                     </p>
                     <div className="basicCardWraper wraper">
                         <div className="basicCardWrap wrap">
-                            <Basiccard />
-                            <Basiccard />
-                            <Basiccard />
+                            {
+                                luxuryCars.map((car)=>(
+                                    <Basiccard key={car.id} category={car.category} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div className="basicCars container">
+                    <p className="basicCarHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
+                        Our Sport Cars
+                    </p>
+                    <div className="basicCardWraper wraper">
+                        <div className="basicCardWrap wrap">
+                            {
+                                sportCars.map((car)=>(
+                                    <Basiccard key={car.id} category={car.category} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
@@ -148,12 +173,14 @@ function Home() {
 
                 <div className="listings container">
                     <p className="listingHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
-                        Our Luxury Cars
+                        Our Basic Cars
                     </p>
                     <div className="listingWraper">
-                        <Listingcard />
-                        <Listingcard />
-                        <Listingcard />
+                        {
+                            basicCars.map((car)=>(
+                                <Listingcard category={car.category} key={car.id} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                            ))
+                        }
                     </div>
                 </div>
 

@@ -1,0 +1,129 @@
+{
+    "basic": [
+        {
+            "id": 11,
+            "img": "./images/carImg.webp",
+            "name": "toyota fortuner",
+            "year": "2022",
+            "price": 1125,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "basic"
+        },
+        {
+            "id": 12,
+            "img": "./images/carImg.webp",
+            "name": "audi A4",
+            "year": "2022",
+            "price": 1125,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "auto", "5 seater"],
+            "category": "basic"
+        },
+        {
+            "id": 13,
+            "img": "./images/carImg.webp",
+            "name": "BMW X1",
+            "year": "2022",
+            "price": 1050,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "basic"
+        },
+        {
+            "id": 14,
+            "img": "./images/carImg.webp",
+            "name": "mercedes c class",
+            "year": "2022",
+            "price": 975,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "basic"
+        }
+    ],
+    "luxury": [
+        {
+            "id": 21,
+            "img": "./images/carImg.webp",
+            "name": "Jaguar XF",
+            "year": "2022",
+            "price": 1499,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "luxury"
+        },
+        {
+            "id": 22,
+            "img": "./images/carImg.webp",
+            "name": "Audi Q5",
+            "year": "2022",
+            "price": 1275,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "luxury"
+        },
+        {
+            "id": 23,
+            "img": "./images/carImg.webp",
+            "name": "Mercedes E Class",
+            "year": "2022",
+            "price": 1275,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "luxury"
+        },
+        {
+            "id": 24,
+            "img": "./images/carImg.webp",
+            "name": "Mercedes S Class",
+            "year": "2022",
+            "price": 2250,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "luxury"
+        },
+        {
+            "id": 25,
+            "img": "./images/carImg.webp",
+            "name": "BMW X5",
+            "year": "2022",
+            "price": 1875,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "luxury"
+        }
+    ],
+    "sports": [
+        {
+            "id": 31,
+            "img": "./images/carImg.webp",
+            "name": "Alfa Romeo Convertible",
+            "year": "2022",
+            "price": 2700,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "manual", "5 seater"],
+            "category": "sports"
+        },
+        {
+            "id": 22,
+            "img": "./images/carImg.webp",
+            "name": "Audi A3 Cabriliot Convertible",
+            "year": "2022",
+            "price": 3000,
+            "rating": 4.5,
+            "trips": 385,
+            "features": ["petrol", "auto", "5 seater"],
+            "category": "sports"
+        }
+    ]
+}
