@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'
+import 'react-datepicker/dist/react-datepicker.css';
 import './Home.css';
 import Featurecard from '../../Components/Featurecard/Featurecard';
 import Bannercard from '../../Components/Bannercard/Bannercard';
@@ -10,9 +10,10 @@ import Listingcard from '../../Components/Listingcard/Listingcard';
 import Basiccard from '../../Components/Basiccard/Basiccard';
 import Footer from '../../Components/Footer/Footer';
 import Data from '../../Data/Cars.json';
-
+import { useNavigate } from 'react-router-dom';
 function Home() {
 
+    const navigate = useNavigate();
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedDatee, setSelectedDatee] = useState(new Date());
     const [showSDate, setShowSDate] = useState(false);
@@ -63,6 +64,7 @@ function Home() {
         console.log(formData);
         localStorage.setItem('form', StringData);
         console.log(localStorage.getItem('form'));
+        navigate(`${formData.category}`);
     }
 
     return (
