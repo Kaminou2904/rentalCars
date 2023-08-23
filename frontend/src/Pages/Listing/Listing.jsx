@@ -9,8 +9,6 @@ function Listing() {
     const { category } = useParams();
     const navigate = useNavigate();
     const formData = JSON.parse(localStorage.getItem('form'));
-    // const category = formData.category;
-    console.log(category);
 
     const categoryCars = Data[category];
 

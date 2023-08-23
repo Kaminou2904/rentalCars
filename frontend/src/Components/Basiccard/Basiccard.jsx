@@ -1,10 +1,13 @@
 import React from 'react';
 import './Basiccard.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Basiccard(props) {
+
+    const navigate = useNavigate();
+
     return (
-        <div className="basicCard br2 p-2 me-2">
+        <div className="basicCard br2 p-2 me-2" onClick={()=> navigate(`/${props.category}/${props.name}`)}>
             <div className="basicCardImg br2">
                 <img src={props.img} alt="" className="img-fluid br2" />
             </div>

@@ -34,11 +34,42 @@ function Detail() {
     let dateS = date.getDate() + " " + month;
     let dateE = date.getDate() + " " + month;
 
+    const convertoMilli = (dateString)=>{
+        const [cDate, cMonth] = dateString.split(' ');
+        const monthIndex = months.indexOf(cMonth)
+
+        if(cDate && monthIndex !== -1){
+            const currentDate = new Date();
+            currentDate.setDate(parseInt(cDate, 10));
+            currentDate.setMonth(monthIndex);
+            return currentDate.getTime();
+        }
+        return 'invalid date'
+    }
+
+    if (localData) {
+        const startMilli = convertoMilli(localData.start);
+        const endMilli = convertoMilli(localData.end);
+    
+        if (startMilli !== 'invalid date' && endMilli !== 'invalid date') {
+          const dateDifference = endMilli - startMilli;
+    
+          // Convert milliseconds to days (86400,000 milliseconds in a day)
+          const dateDifferenceInDays = Math.abs(dateDifference) / 86400000;
+          dateNum = dateDifferenceInDays
+    
+          total = (eightX * dateDifferenceInDays) + tripfair + damage + coven;
+        }
+      }
+
+    // console.log(convertoMilli(localData.start), 'this is the date in millisecond');
+
     if (localStorage.length !== 0) {
-        dateNum = localData.end.split(' ')[0] - localData.start.split(' ')[0];
+        // dateNum = localData.end.split(' ')[0] - localData.start.split(' ')[0];
+
         dateS = localData.start;
         dateE = localData.end;
-        total = (eightX*dateNum) + tripfair + damage + coven;
+        total = (eightX* Math.abs(dateNum)) + tripfair + damage + coven;
     }
 
     return (
@@ -78,7 +109,9 @@ function Detail() {
                             <p className="startDateDate mb-0 urbanist-bold">{dateS}</p>
                         </div>
                         <div className="totalDays bg-primary text-white text-center p-0 px-3 rounded-pill ">
-                            {dateNum} Days
+                            {
+                                dateNum === 0 ? 1 : dateNum  
+                            } Days
                         </div>
                         <div className="endDateCont text-end">
                             <p className="mb-0 endTxt text-muted">End Date</p>

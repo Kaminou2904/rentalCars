@@ -1,10 +1,13 @@
 import React from 'react';
 import './Listingcard.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Listingcard(props) {
+
+    const navigate = useNavigate();
+
     return (
-        <div className="listingCard d-flex br2 p-1 mt-2">
+        <div className="listingCard d-flex br2 p-1 mt-2" onClick={()=> navigate(`/${props.category}/${props.name}`)}>
             <div className="listingCardImg m-1 me-0">
                 <img src={props.img} alt="" className="br2" />
             </div>
