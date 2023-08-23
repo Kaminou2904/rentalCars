@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Detail.css';
 import '../Home/Home.css';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Data from '../../Data/Cars.json';
 
 function Detail() {
 
+    const navigate = useNavigate();
     const [fairdisplay, setFairdisplay] = useState('inline-block');
     const [crossdisplay, setCrossdisplay] = useState('none');
     const [popup, setPopup] = useState('60px');
@@ -70,7 +71,9 @@ function Detail() {
 
     return (
         <div className='mainDetail'>
-
+            <div className="detailHeader">
+                <i className="fas fa-chevron-left text-light fs-4" onClick={()=> navigate(-1)}></i>
+            </div>
             <div className="mainImg container-fluid d-flex justify-content-center align-items-center bg-brand  p-0 rounded-top-0">
                 {/* <img src={`.${foundData.img}`} className='img-fluid' alt="car thum" /> */}
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
