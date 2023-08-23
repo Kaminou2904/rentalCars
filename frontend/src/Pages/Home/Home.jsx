@@ -60,10 +60,8 @@ function Home() {
         formData.end = dateFormatingFunc(selectedDatee);
         formData.category = document.querySelector('.activeMainTab').innerText.toLowerCase();
         formData.location = 'mumbai';
-        const StringData = JSON.stringify(formData) 
-        console.log(formData);
+        const StringData = JSON.stringify(formData)
         localStorage.setItem('form', StringData);
-        console.log(localStorage.getItem('form'));
         navigate(`${formData.category}`);
     }
 
