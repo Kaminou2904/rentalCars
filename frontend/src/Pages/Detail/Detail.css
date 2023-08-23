@@ -10,6 +10,18 @@
     padding: 10px;
 }
 
+/* .carousel-indicators{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    z-index: 55;
+    position: absolute;
+    left: 0px;
+} */
+
+.indicator-tab{
+    background-color: rgba(0, 0, 0, 0.29) !important;
+}
+
 .featTxt{
     font-size: 12px;
     line-height: 12px;

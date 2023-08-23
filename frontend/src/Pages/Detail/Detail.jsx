@@ -34,11 +34,11 @@ function Detail() {
     let dateS = date.getDate() + " " + month;
     let dateE = date.getDate() + " " + month;
 
-    const convertoMilli = (dateString)=>{
+    const convertoMilli = (dateString) => {
         const [cDate, cMonth] = dateString.split(' ');
         const monthIndex = months.indexOf(cMonth)
 
-        if(cDate && monthIndex !== -1){
+        if (cDate && monthIndex !== -1) {
             const currentDate = new Date();
             currentDate.setDate(parseInt(cDate, 10));
             currentDate.setMonth(monthIndex);
@@ -50,33 +50,55 @@ function Detail() {
     if (localData) {
         const startMilli = convertoMilli(localData.start);
         const endMilli = convertoMilli(localData.end);
-    
-        if (startMilli !== 'invalid date' && endMilli !== 'invalid date') {
-          const dateDifference = endMilli - startMilli;
-    
-          // Convert milliseconds to days (86400,000 milliseconds in a day)
-          const dateDifferenceInDays = Math.abs(dateDifference) / 86400000;
-          dateNum = dateDifferenceInDays
-    
-          total = (eightX * dateDifferenceInDays) + tripfair + damage + coven;
-        }
-      }
 
-    // console.log(convertoMilli(localData.start), 'this is the date in millisecond');
+        if (startMilli !== 'invalid date' && endMilli !== 'invalid date') {
+            const dateDifference = endMilli - startMilli;
+
+            // Convert milliseconds to days (86400,000 milliseconds in a day)
+            const dateDifferenceInDays = Math.abs(dateDifference) / 86400000;
+            dateNum = dateDifferenceInDays
+
+            total = (eightX * dateDifferenceInDays) + tripfair + damage + coven;
+        }
+    }
 
     if (localStorage.length !== 0) {
-        // dateNum = localData.end.split(' ')[0] - localData.start.split(' ')[0];
-
         dateS = localData.start;
         dateE = localData.end;
-        total = (eightX* Math.abs(dateNum)) + tripfair + damage + coven;
+        total = (eightX * Math.abs(dateNum)) + tripfair + damage + coven;
     }
 
     return (
         <div className='mainDetail'>
 
             <div className="mainImg container-fluid d-flex justify-content-center align-items-center bg-brand  p-0 rounded-top-0">
-                <img src={`.${foundData.img}`} className='img-fluid' alt="car thum" />
+                {/* <img src={`.${foundData.img}`} className='img-fluid' alt="car thum" /> */}
+                <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button className="indicator-tab active" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                        <button className='indicator-tab' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button className='indicator-tab' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active" data-interval="100">
+                            <img src='../images/carImg3.webp' className="d-block w-100" alt="..." />
+                        </div>
+                        <div className="carousel-item" data-interval="100">
+                            <img src='../images/carImg3.webp' className="d-block w-100" alt="..." />
+                        </div>
+                        <div className="carousel-item"  data-interval="100">
+                            <img src='../images/carImg3.webp' className="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
 
             <div className="carData container">
@@ -110,7 +132,7 @@ function Detail() {
                         </div>
                         <div className="totalDays bg-primary text-white text-center p-0 px-3 rounded-pill ">
                             {
-                                dateNum === 0 ? 1 : dateNum  
+                                dateNum === 0 ? 1 : dateNum
                             } Days
                         </div>
                         <div className="endDateCont text-end">
