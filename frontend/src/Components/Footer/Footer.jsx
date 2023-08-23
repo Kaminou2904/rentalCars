@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
-function Footer() {
+function Footer(props) {
   return (
     <div id='contact' className='mainFooter bg-white'>
         <div className="footerDiv">
@@ -9,7 +9,7 @@ function Footer() {
             <div className="footerLogo container">
                 <img src="./images/CARONRENT LOGO.png" alt="" className="img-fluid"/>
             </div>
-            <div className="quickLinks d-flex justify-content-center align-items-center pt-4">
+            <div className="quickLinks justify-content-center align-items-center pt-4" style={{display: props.disp}}>
                 <a href="#home" className="footerLink nav-link brandP urbanist-black border-end px-2">Home</a>
                 <a href="#about" className="footerLink nav-link brandP urbanist-black border-end px-2">About</a>
                 <a href="#cars" className="footerLink nav-link brandP urbanist-black border-end px-2">Cars</a>

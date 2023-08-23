@@ -20,6 +20,7 @@ function Home() {
     const [showEDate, setEhowSDate] = useState(false);
     const [datepickere, setDatepickere] = useState(false);
     const [activeMainTab, setActiveMainTab] = useState(0);
+    const formData = {};
 
     const startDateClick = () => {
         setShowSDate(true);
@@ -40,9 +41,29 @@ function Home() {
     const basicCars = Data.basic;
     const luxuryCars = Data.luxury;
     const sportCars = Data.sports;
-    console.log(sportCars);
-    console.log(luxuryCars);
-    console.log(basicCars);
+
+    const dateFormatingFunc = (date)=>{
+        const newDate = new Date(date);
+        const options = {
+            day: 'numeric', 
+            month: 'short'
+        };
+        const formattedDate = newDate.toLocaleDateString('en-US', options);
+        const reversedDate = formattedDate.split(' ').reverse().join(" ");
+        return reversedDate;
+    }
+
+    
+    const searchFunc = ()=>{
+        formData.start = dateFormatingFunc(selectedDate);
+        formData.end = dateFormatingFunc(selectedDatee);
+        formData.category = document.querySelector('.activeMainTab').innerText.toLowerCase();
+        formData.location = 'mumbai';
+        const StringData = JSON.stringify(formData) 
+        console.log(formData);
+        localStorage.setItem('form', StringData);
+        console.log(localStorage.getItem('form'));
+    }
 
     return (
         <div className='main' id='home'>
@@ -107,7 +128,7 @@ function Home() {
                                 </div>
                             </div>
                             <div className="searchBtn text-center mt-2">
-                                <button className="searchBtn btn btn-primary bg-brand2 border-0 rounded-pill text-center fs-4 urbanist-regular w-75">Search</button>
+                                <button className="searchBtn btn btn-primary bg-brand2 border-0 rounded-pill text-center fs-4 urbanist-regular w-75" onClick={searchFunc}>Search</button>
                             </div>
                         </div>
                     </div>
@@ -267,7 +288,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer disp="flex"/>
         </div>
     )
 }

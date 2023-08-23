@@ -9,14 +9,21 @@ function Detail() {
     const [crossdisplay, setCrossdisplay] = useState('none');
     const [popup, setPopup] = useState('60px');
     const [background, setBackground] = useState('none');
+    const [wrap, setWrap] = useState('auto');
     const {name} = useParams();
     const {category} = useParams();
     const data = Data;
-
+    const tripfair = 9999;
+    const damage = 599;
+    const coven = 99;
+    
     const cardata = data[category];
     const foundData = cardata.find(car => car.name === name);
     
-    
+    const eightX = foundData.price*8;
+    const total = eightX + tripfair + damage + coven;
+
+    const dateNum = JSON.parse(localStorage.getItem('form')).end.split(' ')[0] - JSON.parse(localStorage.getItem('form')).start.split(' ')[0];
 
   return (
     <div className='mainDetail'>
@@ -52,14 +59,14 @@ function Detail() {
                 <div className="bookingCard bg-brand br2 p-3 d-flex justify-content-between align-items-center">
                     <div className="startDateCont text-start">
                         <p className="startTxt text-muted mb-0">Start Date</p>
-                        <p className="startDateDate mb-0 urbanist-bold">21 Aug</p>
+                        <p className="startDateDate mb-0 urbanist-bold">{JSON.parse(localStorage.getItem('form')).start}</p>
                     </div>
                     <div className="totalDays bg-primary text-white text-center p-0 px-3 rounded-pill ">
-                        3 Days
+                        {dateNum} Days
                     </div>
                     <div className="endDateCont text-end">
                         <p className="mb-0 endTxt text-muted">End Date</p>
-                        <p className="endDateDate mb-0 urbanist-bold">23 Aug</p>
+                        <p className="endDateDate mb-0 urbanist-bold">{JSON.parse(localStorage.getItem('form')).end}</p>
                     </div>
                 </div>
             </div>
@@ -110,30 +117,33 @@ function Detail() {
             </div>
         </div>
 
-        <div className="floatBtnWrap" style={{backgroundColor: background}}>
+        <div className="floatBtnWrap" style={{backgroundColor: background, height: wrap}}>
             <div className="popupWraper container bg-white py-2">
             <div className="popup">
                 <div className="popupWrap px-3" style={{height: popup}}>
                     <p className="actionTxt text-muted mb-0" style={{display: fairdisplay}}>Tap to see the FAIR Summary</p>
-                    <div className="mainPrice mb-0 urbanist-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹29,999 <span className="mainpriceSpan text-primary text-uppercase urbanist-bold ms-auto fs-5" style={{display: fairdisplay}} onClick={()=> {
+                    <div className="mainPrice mb-0 urbanist-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹{total} <span className="mainpriceSpan text-primary text-uppercase urbanist-bold ms-auto fs-5" style={{display: fairdisplay}} onClick={()=> {
                         setFairdisplay('none'); 
                         setCrossdisplay('inline-block'); 
                         setPopup('60vh'); 
                         setBackground('rgba(0,0,0,0.3)');
+                        setWrap('100vh');
                     }}><i className="fas fa-file-alt me-2"></i>Fair summary</span><span className="crossSpan ms-auto fs-1" style={{display: crossdisplay}} onClick={()=>{
                         setFairdisplay('inline-block'); 
                         setCrossdisplay('none'); 
                         setPopup('70px'); 
                         setBackground('rgba(0,0,0,0)');
+                        setWrap('auto');
                     }}>&times;</span></div>
                     <div className="popupTitel bg-light p-2 py-1 urbanist-semibold fs-6 mt-2 text-uppercase">Fair Summary</div>
                     <ul className="priceDetails ps-0 mt-2">
+                      <li className="priceLi text-muted urbanist-regular ls-2  d-flex justify-cotent-between py-2 text-capitalize">Price for eight hours<span className='priceLiSpan ms-auto urbanist-bold'>₹{eightX}</span></li>
                       <li className="priceLi text-muted urbanist-regular ls-2  d-flex justify-cotent-between py-2">Trip Fair (Unlimited KMs without Fuel) <span className='priceLiSpan ms-auto urbanist-bold'>₹9,999</span></li>
                       <li className="priceLi text-muted urbanist-regular ls-2  d-flex justify-cotent-between py-2">Damage Protection Fee <span className='priceLiSpan ms-auto urbanist-bold'>₹599</span></li>
                       <li className="priceLi text-muted urbanist-regular ls-2  d-flex justify-cotent-between py-2">Convenience Fee <span className='priceLiSpan ms-auto urbanist-bold'>₹99</span></li>
-                      <li className="priceLi text-muted urbanist-black ls-2 d-flex justify-cotent-between py-2">Total Fare <span className='priceLiSpan ms-auto urbanist-black'>₹29,999</span></li>
+                      <li className="priceLi text-muted urbanist-black ls-2 d-flex justify-cotent-between py-2">Total Fare <span className='priceLiSpan ms-auto urbanist-black'>₹{total}</span></li>
                       <li className="priceLi text-muted urbanist-regular ls-2  d-flex justify-cotent-between py-2">Resfunable Fee <span className='priceLiSpan ms-auto urbanist-bold'>₹0</span></li>
-                      <li className="priceLi text-muted urbanist-black ls-2 d-flex justify-cotent-between py-2">Final Fare <span className='priceLiSpan ms-auto urbanist-black'>₹29,999</span></li>
+                      <li className="priceLi text-muted urbanist-black ls-2 d-flex justify-cotent-between py-2">Final Fare <span className='priceLiSpan ms-auto urbanist-black'>₹{total}</span></li>
                     </ul>
                 </div>
             </div>
