@@ -88,8 +88,8 @@
         },
         {
             "id": 23,
-            "img": "./images/Mercedes E Class - Luxury - 16-9.jpg",
-            "mainimg" : "../images/Mercedes E Class - Luxury - 1-1.jpg",
+            "img": "./images/mercedesEclass16-9.jpg",
+            "mainimg" : "../images/mercedesEclass1-1.jpg",
             "name": "Mercedes E Class",
             "year": "2022",
             "price": 1275,
@@ -100,8 +100,8 @@
         },
         {
             "id": 24,
-            "img": "./images/Mercedes S Class - Luxury - 16-9.jpg",
-            "mainimg" : "../images/Mercedes S Class - Luxury - 1-1.jpg",
+            "img": "./images/mercedesSclass16-9.jpg",
+            "mainimg" : "../images/mercedesSclass1-1.jpg",
             "name": "Mercedes S Class",
             "year": "2022",
             "price": 1275,
@@ -244,8 +244,8 @@
         },
         {
             "id": 216,
-            "img": "./images/Jaguar XF - Luxury - 16-9.jpg",
-            "mainimg" : "../images/Jaguar XF - Luxury - 1-1.jpg",
+            "img": "./images/Jaguar XF - Luxury- 16-9.jpg",
+            "mainimg" : "../images/Jaguar XF - Luxury- 1-1.jpg",
             "name": "jaguar XF",
             "year": "2022",
             "price": 1275,
@@ -342,8 +342,8 @@
         },
         {
             "id": 22,
-            "img": "./images/Audi A3 Cabriliot Convertible - Sports - 16-9.jpg",
-            "mainimg" : "../images/Audi A3 Cabriliot Convertible - Sports - 1-1.jpg",
+            "img": "./images/audiA316-9.jpg",
+            "mainimg" : "../images/audiA31-1.jpg",
             "name": "Audi A3 Cabriliot Convertible",
             "year": "2022",
             "price": 3000,
