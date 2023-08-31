@@ -4,11 +4,11 @@
     left: 0px;
 }
 
-.mainImg{
+/* .mainImg{
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
     padding: 10px;
-}
+} */
 
 /* .carousel-indicators{
     background-color: rgba(0, 0, 0, 0.3);
@@ -136,4 +136,16 @@
 
 .floatBtn{
     letter-spacing: 3px;
+    position: relative;
+    z-index: 17;
+}
+
+.numberInpuPopup{
+    min-height: 70vh;
+    width: 100%;
+    background-color: white;
+    z-index: 16;
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
 }

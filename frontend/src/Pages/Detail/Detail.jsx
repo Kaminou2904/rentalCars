@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Detail.css';
-import '../Home/Home.css';
+// import '../Home/Home.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Data from '../../Data/Cars.json';
 
@@ -10,8 +10,10 @@ function Detail() {
     const [fairdisplay, setFairdisplay] = useState('inline-block');
     const [crossdisplay, setCrossdisplay] = useState('none');
     const [popup, setPopup] = useState('60px');
+    const [numpopup, setNumpopup] = useState('none')
     const [background, setBackground] = useState('none');
     const [wrap, setWrap] = useState('auto');
+    const [numVal, setNumVal] = useState('');
     const { name } = useParams();
     const { category } = useParams();
     const data = Data;
@@ -21,6 +23,7 @@ function Detail() {
 
     const cardata = data[category];
     const foundData = cardata.find(car => car.name === name);
+    console.log(foundData);
 
     const eightX = foundData.price * 8;
     let total = (eightX) + tripfair + damage + coven;
@@ -74,8 +77,7 @@ function Detail() {
             <div className="detailHeader">
                 <i className="fas fa-chevron-left text-light fs-4" onClick={()=> navigate(-1)}></i>
             </div>
-            <div className="mainImg container-fluid d-flex justify-content-center align-items-center bg-brand  p-0 rounded-top-0">
-                {/* <img src={`.${foundData.img}`} className='img-fluid' alt="car thum" /> */}
+            <div className="mainImg bg-brand  p-0 rounded-top-0">
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button className="indicator-tab active" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
@@ -84,13 +86,13 @@ function Detail() {
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active" data-interval="100">
-                            <img src='../images/carImg3.webp' className="d-block w-100" alt="..." />
+                            <img src={foundData.mainimg} className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item" data-interval="100">
-                            <img src='../images/carImg3.webp' className="d-block w-100" alt="..." />
+                            <img src={foundData.mainimg} className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item"  data-interval="100">
-                            <img src='../images/carImg3.webp' className="d-block w-100" alt="..." />
+                            <img src={foundData.mainimg} className="d-block w-100" alt="..." />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -221,7 +223,21 @@ function Detail() {
                             </ul>
                         </div>
                     </div>
-                    <div className="floatBtn w-100 btn btn-primary rounded-3 mb-1 fs-5 text-uppercase urbanist-bold mt-2">
+                    <div className="numberInpuPopup container-fluid" style={{display: numpopup}}>
+                        <div className="container p-3">
+                        <div className="crossSpan ms-auto text-end w-100 fs-1" onClick={() => {
+                                setNumpopup('none')
+                            }}>&times;</div>
+                        <div className="mainPrice mb-1 urbanist-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">Enter your number</div>
+                        <div className="inpuWrap rounded-3 d-flex justify-content-between align-items-center border p-2">
+                            <div className="91div fs-5">+91</div>
+                            <input type="tel" className='numberInpu form-control shadow-none outline-none border-0 p-2 px-3 rounded-3 fs-5' onChange={(e)=> setNumVal(e.target.value)} value={numVal} placeholder='Enter your Number'/>
+                        </div>
+                        </div>
+                    </div>
+                    <div className="floatBtn w-100 btn btn-primary rounded-3 mb-1 fs-5 text-uppercase urbanist-bold mt-2"
+                        onClick={()=>{setNumpopup('block')}}
+                    >
                         Continue
                     </div>
                 </div>

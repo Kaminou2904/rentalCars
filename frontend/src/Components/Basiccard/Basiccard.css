@@ -3,9 +3,14 @@
     background-color: rgb(208 241 253);
 }
 
+.basicCardImg img{
+    width: 100% !important;
+}
+
 .basicName{
     font-size: 18px;
     line-height: 19px;
+    height: 40px;
 }
 
 .basicTab{

@@ -32,7 +32,7 @@ function Basiccard(props) {
                         </p>
                     </div>
                 </div>
-                <div className="priceWrap d-flex justify-content-between align-items-end mt-2">
+                <div className="priceWrap d-flex justify-content-between align-items-end mt-0">
                     <p className="listingCardPrice d-flex flex-column mb-0 urbanist-bold">
                         ₹{props.price} /Hour
                         <span className="priceSpan text-muted">8 hrs 80 kms</span>

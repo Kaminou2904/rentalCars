@@ -23,6 +23,10 @@
     line-height: 19px;
 }
 
+.listingCardData{
+    width: 45%;
+}
+
 .ratingP{
     font-size: 12px !important;
 }
