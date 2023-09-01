@@ -2,6 +2,22 @@
     background-color: rgb(122, 183, 210);
 } */
 
+.whatIcon{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatIcon i{
+    font-size: 50px !important;
+}
+
 .invertedImg{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
