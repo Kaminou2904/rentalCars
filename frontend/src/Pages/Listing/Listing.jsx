@@ -19,7 +19,7 @@ function Listing() {
                 <i className="fas fa-arrow-left me-3 mb-0" onClick={()=> navigate(-1)}></i>    
             </div>
             <div className="mainRight">
-                <p className="mb-0 listingHead urbanist-bold text-capitalize">{category} Cars</p>
+                <p className="mb-0 listingHead outfit-bold text-capitalize">{category} Cars</p>
                 <p className="headDate mb-0 text-muted">{formData.start} <span className="text-primary">{`->`}</span> {formData.end}</p>
             </div>
         </div>

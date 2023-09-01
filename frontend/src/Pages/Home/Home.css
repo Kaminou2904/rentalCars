@@ -3,7 +3,7 @@
 } */
 
 .logoWrap{
-    width: min(50%, 300px);
+    width: min(40%, 300px);
     margin: auto;
 }
 
@@ -12,12 +12,24 @@
 }
 
 .heroMain{
-    background-image: url('../../../public/images/carImg.webp');
+    background-image: url('https://img.freepik.com/premium-photo/black-sport-car-dark-background-3d-render_68747-40.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .hero{
-    background-color: #1f4f964e;
+    /* background-color: #00000057; */
     height: 226px !important;
+}
+
+.exploreBtn{
+    font-size: 12px !important;
+    line-height: 12px;
+}
+
+.aboutTxt{
+    font-size: 14px;
+    line-height: 16px ;
 }
 
 .mainTab{
@@ -60,9 +72,9 @@
     margin-bottom: 0px !important;
 }
 
-.dateInputs{
+/* .dateInputs{
     margin-top: 60px !important;
-}
+} */
 
 .startDateInpu, .endDateInpu{
     outline: none;
@@ -114,6 +126,15 @@
     width: max-content;
 }
 
+.serviceImg{
+    width: min(40%, 300px);
+}
+
+.serviceCardPara{
+    font-size: 14px;
+    line-height: 15px;
+}
+
 .whyWraper{
     width: 100%;
     overflow-x: auto;
@@ -125,4 +146,32 @@
 
 .whyWrap{
     width: max-content;
+}
+
+.whyLogo{
+    width: 100px;
+    position: relative;
+    top: 6px;
+}
+
+.whyCardPara{
+    font-size: 14px;
+    line-height: 15px;
+    color: #9f9f9f;
+}
+
+.blogTxt{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.blogCardTxtPara{
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.contactTxt{
+    font-size: 16px;
+    line-height: 18px;
+    color: gray;
 }

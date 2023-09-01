@@ -12,16 +12,16 @@ function Listingcard(props) {
                 <img src={props.img} alt="" className="br2" />
             </div>
             <div className="listingCardData ps-3 py-1">
-                <p className="listingCardName mb-0 urbanist-bold text-capitalize">{props.name}</p>
+                <p className="listingCardName mb-0 outfit-bold text-capitalize">{props.name}</p>
                 <div className="ratingDiv">
                     <p className="ratingP d-flex align-items-center text-muted  mb-0 p-0 m-0">
-                        <span className="ratingSpan  text-center rounded-pill text-dark urbanist-bold me-1 mb-0">
+                        <span className="ratingSpan  text-center rounded-pill text-dark outfit-bold me-1 mb-0">
                             <i className="fas fa-star text-warning"></i> {props.rating}
                         </span>
                         {props.trips} Trips
                     </p>
                 </div>
-                <p className="listingCardPrice d-flex flex-column mb-0 urbanist-bold">
+                <p className="listingCardPrice d-flex flex-column mb-0 outfit-bold">
                     ₹{props.price} /Hour
                     <span className="priceSpan text-muted">8 hrs 80 kms</span>
                 </p>

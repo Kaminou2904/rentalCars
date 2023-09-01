@@ -4,24 +4,23 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './Home.css';
 import Featurecard from '../../Components/Featurecard/Featurecard';
 import Bannercard from '../../Components/Bannercard/Bannercard';
-import Flexcard from '../../Components/Flexcard/Flexcard';
 import Happycard from '../../Components/Happycard/Happycard';
 import Listingcard from '../../Components/Listingcard/Listingcard';
 import Basiccard from '../../Components/Basiccard/Basiccard';
 import Footer from '../../Components/Footer/Footer';
 import Data from '../../Data/Cars.json';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 function Home() {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedDatee, setSelectedDatee] = useState(new Date());
     const [showSDate, setShowSDate] = useState(false);
     const [datepickers, setDatepickers] = useState(false);
     const [showEDate, setEhowSDate] = useState(false);
     const [datepickere, setDatepickere] = useState(false);
-    const [activeMainTab, setActiveMainTab] = useState(0);
-    const formData = {};
+    // const [activeMainTab, setActiveMainTab] = useState(0);
+    // const formData = {};
 
     const startDateClick = () => {
         setShowSDate(true);
@@ -43,163 +42,167 @@ function Home() {
     const luxuryCars = Data.luxury;
     const sportCars = Data.sports;
 
-    const dateFormatingFunc = (date)=>{
-        const newDate = new Date(date);
-        const options = {
-            day: 'numeric', 
-            month: 'short'
-        };
-        const formattedDate = newDate.toLocaleDateString('en-US', options);
-        const reversedDate = formattedDate.split(' ').reverse().join(" ");
-        return reversedDate;
-    }
+    // const dateFormatingFunc = (date) => {
+    //     const newDate = new Date(date);
+    //     const options = {
+    //         day: 'numeric',
+    //         month: 'short'
+    //     };
+    //     const formattedDate = newDate.toLocaleDateString('en-US', options);
+    //     const reversedDate = formattedDate.split(' ').reverse().join(" ");
+    //     return reversedDate;
+    // }
 
-    
-    const searchFunc = ()=>{
-        formData.start = dateFormatingFunc(selectedDate);
-        formData.end = dateFormatingFunc(selectedDatee);
-        formData.category = document.querySelector('.activeMainTab').innerText.toLowerCase();
-        formData.location = 'mumbai';
-        const StringData = JSON.stringify(formData)
-        localStorage.setItem('form', StringData);
-        navigate(`${formData.category}`);
-    }
+
+    // const searchFunc = () => {
+    //     formData.start = dateFormatingFunc(selectedDate);
+    //     formData.end = dateFormatingFunc(selectedDatee);
+    //     formData.category = document.querySelector('.activeMainTab').innerText.toLowerCase();
+    //     formData.location = 'mumbai';
+    //     const StringData = JSON.stringify(formData)
+    //     localStorage.setItem('form', StringData);
+    //     navigate(`${formData.category}`);
+    // }
 
     return (
         <div className='main' id='home'>
             <div className="mainHead py-2 pt-3">
                 <div className="mainHeadWrap">
-                    {/* <h2 className="rentalLogo text-white urbanist-black text-center fs-1 mb-0">CaronRent</h2> */}
-                    <div className="logoWrap mx-auto mt-3">
+                    {/* <h2 className="rentalLogo text-white outfit-black text-center fs-1 mb-0">CaronRent</h2> */}
+                    <div className="logoWrap mx-auto my-3">
                         <img src="./images/CARONRENT LOGO.png" className='img-fluid' alt="" />
                     </div>
-                    {/* <p className="headerTxt text-center urbanist-light">Electric Cars on Rent in India</p> */}
-                    <div className="heroMain mt-3">
-                    {/* <video autoPlay muted loop playsInline className='img-fluid mt-3'>
+                    {/* <p className="headerTxt text-center outfit-light">Electric Cars on Rent in India</p> */}
+                    <div className="heroMain mt-4">
+                        {/* <video autoPlay muted loop playsInline className='img-fluid mt-3'>
                         <source src='./images/Car On Rent Video.m4v'/>
-                    </video> */}
-                    <div className="hero pt-1">
-                    <div className="mainTabs container mt-2">
-                        <div className="mainTabWrap d-flex justify-content-around align-items-center">
-                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 0 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(0)}>Basic</div>
-                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 1 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(1)}>Luxury</div>
-                            <div className={`mainTab urbanist-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Sports</div>
+                        </video> */}
+                        <div className="hero pt-1 d-flex flex-column justify-content-end align-items-start p-4">
+                            {/* <div className="mainTabs container mt-2">
+                                <div className="mainTabWrap d-flex justify-content-around align-items-center">
+                                    <div className={`mainTab outfit-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 0 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(0)}>Basic</div>
+                                    <div className={`mainTab outfit-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 1 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(1)}>Luxury</div>
+                                    <div className={`mainTab outfit-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Sports</div>
+                                </div>
+                    </div> */}
+                            <p className="mb-0 outfit-regular text-white lh-sm px-2">Experience Luxury Driving <br /> in Mumbai with <span className="text-primary outfit-bold">Caronrent.co</span></p>
+                            <button className="exploreBtn btn btn-primary fs-6 rounded-pill mt-2 px-4 mb-3 mx-2">EXPLORE CARS</button>
                         </div>
                     </div>
-
-                    <div className="form mt-4 br1 p-3">
+                    <div className="form br1 p-0 px-3 mt-0 ">
                         <div className="formWrap">
-                            <div className="dateInputs bg-brand2 rounded-3 p-2 d-flex justify-content-between align-items-center mt-5">
+                            <div className="dateInputs bg-brand2 rounded-3 p-2 d-flex justify-content-between align-items-center mt-4">
                                 <div className="locationTab tab mx-0 mb-0">
                                     <p className="locationTabP w-100 py-1 mb-0 btn btn-light text-nowrap"><i className="fas fa-map-marker-alt me-1 brand-color"></i>Mumbai</p>
                                 </div>
                                 <div className="startDate text-center tab">
                                     {showSDate ? (
-                                            <DatePicker
-                                                selected={selectedDate}
-                                                onChange={dateSonchange}
-                                                minDate={new Date()}
-                                                dateFormat="dd/MM/yyyy"
-                                                showYearDropdown
-                                                scrollableMonthYearDropdown
-                                                className='startDateInpu btn btn-light border-0 rounded-3 mt-2 urbanist-regular fs-6 br1 text-center'
-                                                open={datepickers}
-                                            />
-                                        ): <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={startDateClick}>Start Date</span>
-                                        }
+                                        <DatePicker
+                                            selected={selectedDate}
+                                            onChange={dateSonchange}
+                                            minDate={new Date()}
+                                            dateFormat="dd/MM/yyyy"
+                                            showYearDropdown
+                                            scrollableMonthYearDropdown
+                                            className='startDateInpu btn btn-light border-0 rounded-3 mt-2 outfit-regular fs-6 br1 text-center'
+                                            open={datepickers}
+                                        />
+                                    ) : <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={startDateClick}>Start Date</span>
+                                    }
                                 </div>
                                 <div className="endDate text-center tab">
                                     {showEDate ? (
-                                            <DatePicker
-                                                selected={selectedDatee}
-                                                onChange={date => {
-                                                    setSelectedDatee(date);
-                                                    setDatepickere(false)
-                                                }}
-                                                minDate={new Date()}
-                                                dateFormat="dd/MM/yyyy"
-                                                showYearDropdown
-                                                scrollableMonthYearDropdown
-                                                open={datepickere}
-                                                className='endDateInpu btn btn-light border-0 rounded-3 mt-2 urbanist-regular fs-6 br1 text-center'
-                                            />
-                                        ): <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={endDateClick}>End Date</span>
-                                        }
+                                        <DatePicker
+                                            selected={selectedDatee}
+                                            onChange={date => {
+                                                setSelectedDatee(date);
+                                                setDatepickere(false)
+                                            }}
+                                            minDate={new Date()}
+                                            dateFormat="dd/MM/yyyy"
+                                            showYearDropdown
+                                            scrollableMonthYearDropdown
+                                            open={datepickere}
+                                            className='endDateInpu btn btn-light border-0 rounded-3 mt-2 outfit-regular fs-6 br1 text-center'
+                                        />
+                                    ) : <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={endDateClick}>End Date</span>
+                                    }
                                 </div>
                             </div>
                             <div className="searchBtn text-center mt-2">
-                                <button className="searchBtn btn btn-primary bg-brand2 border-0 rounded-pill text-center fs-4 urbanist-regular w-75" onClick={searchFunc}>Search</button>
+                                <button className="searchBtn btn btn-primary bg-brand2 border-0 rounded-pill text-center fs-4 outfit-regular w-75">Search</button>
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
+            </div>
+
+            <div className="featureDiv container mt-5">
+                <p className="featHead mb-0 fs-5 outfit-bold mb-1">
+                    Special Offer
+                </p>
+                <div className="featureWraper">
+                    <div className="featCardWrap d-flex">
+                        <Featurecard />
+                        <Featurecard />
+                        <Featurecard />
                     </div>
                 </div>
             </div>
 
-            <div className="aboutDiv mt-5" id="about">
-                <p className="aboutHead mb-0 text-black fs-4 urbanist-bold mb-0 pt-2 text-center">
-                    Welcome to CarOnRent
+            <div className="basicCars container">
+                <p className="basicCarHead mb-0 fs-4 outfit-bold mb-1 mt-5">
+                    Our Sport Cars
                 </p>
-                <p className="aboutTxt text-center lh-sm text-muted px-2 mb-0 urbanist-semibold">
-                    Your Destination for Hassle-Free Car Rentals! Explore our wide range of rental cars and hit the road with ease.
+                <div className="basicCardWraper wraper">
+                    <div className="basicCardWrap wrap">
+                        {
+                            sportCars.map((car) => (
+                                <Basiccard key={car.id} category={car.category} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div className="aboutDiv container mt-5" id="about">
+                <p className="aboutHead mb-0 text-primary fs-4 outfit-bold mb-0 pt-2">
+                    Welcome to Car On Rent
+                </p>
+                <p className="aboutTxt mt-2 text-muted mb-0 outfit-semibold">
+                    Welcome to CarOnRent.co - Your Premier Luxury Car Rental Service in Mumbai. We specialize in providing top-notch luxury and sports cars for rent, allowing you to elevate your driving experience and make a statement wherever you go. <br /><br />
+                    The Ultimate Guide to Luxury Car Rentals in Mumbai
+                    Explore the perks of renting a luxury car in Mumbai and how it can transform your driving experience. <br /><br />
+
+                    Top 5 Exotic Cars You Can Rent in Mumbai
+                    Showcase the most sought-after exotic cars available for rent, highlighting their features and performance.
                 </p>
             </div>
 
-            <div className="mainBody pt-3 mt-5 pb-5">
-                <div className="featureDiv container">
-                    <p className="featHead mb-0 text-secondary fs-4 urbanist-bold mb-1">
-                        Features
-                    </p>
-                    <div className="featureWraper">
-                        <div className="featCardWrap d-flex">
-                            <Featurecard />
-                            <Featurecard />
-                            <Featurecard />
-                        </div>
-                    </div>
-                </div>
-
-
+            <div className="mainBody pt-1 mt-5 pb-5">
                 <div id='cars' className="basicCars container">
-                    <p className="basicCarHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
+                    <p className="basicCarHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-3">
                         Our Luxury Cars
                     </p>
                     <div className="basicCardWraper wraper">
                         <div className="basicCardWrap wrap">
                             {
-                                luxuryCars.map((car)=>(
-                                    <Basiccard key={car.id} category={car.category} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                                luxuryCars.map((car) => (
+                                    <Basiccard key={car.id} category={car.category} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
                                 ))
                             }
                         </div>
                     </div>
                 </div>
-
-                <div className="basicCars container">
-                    <p className="basicCarHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
-                        Our Sport Cars
-                    </p>
-                    <div className="basicCardWraper wraper">
-                        <div className="basicCardWrap wrap">
-                            {
-                                sportCars.map((car)=>(
-                                    <Basiccard key={car.id} category={car.category} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
-                                ))
-                            }
-                        </div>
-                    </div>
-                </div>
-
 
                 <div className="listings container">
-                    <p className="listingHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
+                    <p className="listingHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
                         Our Basic Cars
                     </p>
                     <div className="listingWraper">
                         {
-                            basicCars.map((car)=>(
-                                <Listingcard category={car.category} key={car.id} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                            basicCars.map((car) => (
+                                <Listingcard category={car.category} key={car.id} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
                             ))
                         }
                     </div>
@@ -208,7 +211,7 @@ function Home() {
 
 
                 <div className="banner container">
-                    <p className="bannerHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
+                    <p className="bannerHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
                         Our Loved Ones
                     </p>
                     <div className="bannerWraper">
@@ -220,21 +223,77 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="why container mt-4">
-                    <p className="whyHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
-                        Why Us?
+                <div className="ourServiceDiv container">
+                    <p className="servicesHead mb-5 text-secondary fs-4 outfit-bold mb-1 mt-5 text-center">
+                        Discover Our Services
                     </p>
-                    <div className="whyWraper">
-                        <div className="whyWrap d-flex">
-                            <Flexcard />
-                            <Flexcard />
-                            <Flexcard />
+                    <div className="serviceCard text-center mb-4">
+                        <div className="serviceImg mx-auto">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                        </div>
+                        <div className="serviceCardTxt">
+                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Luxury Car Rentals</p>
+                            <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Cruise the city in style with our exquisite selection of luxury vehicles.</p>
+                        </div>
+                    </div>
+                    <div className="serviceCard text-center mb-4">
+                        <div className="serviceImg mx-auto">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                        </div>
+                        <div className="serviceCardTxt">
+                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Sports Cars on Rent</p>
+                            <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Feel the thrill of high-performance driving with our range of sports cars.</p>
+                        </div>
+                    </div>
+                    <div className="serviceCard text-center mb-4">
+                        <div className="serviceImg mx-auto">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                        </div>
+                        <div className="serviceCardTxt">
+                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Convertible Car Rentals</p>
+                            <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Experience open-top driving and enjoy the beauty of Mumbai.</p>
+                        </div>
+                    </div>
+                    <div className="serviceCard text-center mb-4">
+                        <div className="serviceImg mx-auto">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                        </div>
+                        <div className="serviceCardTxt">
+                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Luxury Car Rentals with Driver</p>
+                            <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Sit back and relax while our professional drivers take the wheel.</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="faq container mt-4">
-                    <p className="happyHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
+                <div className="why container">
+                    <div className="d-flex align-items-center">
+                        <p className="whyHead mb-1 text-secondary fs-4 lh-sm outfit-bold mb-1 mt-4">
+                            Why Choose <span className="text-primary outfit-bold">Caronrent.co</span>
+                        </p>
+                        {/* <div className="whyLogo ms-2">
+                            <img src="./images/CARONRENT LOGO.png" className='img-fluid' alt="logo" />
+                        </div> */}
+                    </div>
+                    <div className="whyCardWrap">
+                        <div className="whyCard mt-2">
+                            <p className="whyCardHead mb-0 outfit-medium fs-5 text-secondary">Extensive Fleet :</p>
+                            <p className="whyCardPara">Choose from a wide variety of luxury and sports cars.
+                                Seamless Booking: Our user-friendly platform ensures a hassle-free booking experience</p>
+                        </div>
+                        <div className="whyCard mt-2">
+                            <p className="whyCardHead mb-0 outfit-medium fs-5 text-secondary">Competitive Prices :</p>
+                            <p className="whyCardPara">Enjoy luxury at affordable rates.
+                                Professional Drivers: Experience convenience with our skilled and courteous drivers</p>
+                        </div>
+                        <div className="whyCard mt-2">
+                            <p className="whyCardHead mb-0 outfit-medium fs-5 text-secondary">Flexible Rental Options :</p>
+                            <p className="whyCardPara">From hourly to monthly rentals, we cater to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="faq container mt-5">
+                    <p className="happyHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
                         FAQs
                     </p>
                     <div className="faqWraper">
@@ -242,7 +301,7 @@ function Home() {
                             <div className="accordion accordion-flush" id="accordionFlushExample">
                                 <div className="accordion-item br1 mb-1">
                                     <h2 className="accordion-header">
-                                        <button className="accordion-button collapsed urbanist-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <button className="accordion-button collapsed outfit-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                             Is there a speed limit?
                                         </button>
                                     </h2>
@@ -252,7 +311,7 @@ function Home() {
                                 </div>
                                 <div className="accordion-item br1 mb-1">
                                     <h2 className="accordion-header">
-                                        <button className="accordion-button collapsed urbanist-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        <button className="accordion-button collapsed outfit-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                             Can I extend/ cancle/ modify?
                                         </button>
                                     </h2>
@@ -262,7 +321,7 @@ function Home() {
                                 </div>
                                 <div className="accordion-item br1 mb-1">
                                     <h2 className="accordion-header">
-                                        <button className="accordion-button collapsed urbanist-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <button className="accordion-button collapsed outfit-bold br1 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                             Booking criteria and documents?
                                         </button>
                                     </h2>
@@ -276,7 +335,7 @@ function Home() {
                 </div>
 
                 <div className="happyCustomer container">
-                    <p className="happyHead mb-0 text-secondary fs-4 urbanist-bold mb-1 mt-4">
+                    <p className="happyHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
                         Happy Customers
                     </p>
                     <div className="happyWraper wraper">
@@ -288,7 +347,46 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Footer disp="flex"/>
+
+            <div className="blogDiv container">
+                    <p className="happyHead mb-0 text-dark fs-4 outfit-bold mb-1 mt-4">
+                        Blog Section :
+                    </p>
+                    <p className="blogTxt text-muted outfit-medium mb-0">Check out our latest blog posts for insights into luxury driving, the best driving routes in Mumbai, and tips for choosing the perfect luxury car for your needs.</p>
+                    <div className="blogWrap">
+                        <div className="blogCard mt-4 px-3">
+                            <div className="blogImg">
+                                <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
+                            </div>
+                            <div className="blogCardTxt px-2">
+                                <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
+                                    Tips to save fuel: 
+                                    <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="blogCard mt-4 px-3">
+                            <div className="blogImg">
+                                <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
+                            </div>
+                            <div className="blogCardTxt px-2">
+                                <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
+                                    Tips to save fuel: 
+                                    <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="contactDiv container mt-5 px-4">
+                    <p className="contactHead mb-0 text-center fs-4 outfit-bold">Get In <span className="text-primary outfit-bold">Touch</span></p>
+                    <p className="contactTxt text-center">
+                        For bookings, inquiries, or assistance, don't hesitate to reach out to our dedicated team. You can email us at <a href="mailto:contact@caronrent.co" className="nav-link text-primary outfit-medium d-inline">contact@caronrent.co</a> or call us at <a href="tel:+919876543210" className="nav-link text-primary outfit-medium d-inline">9876543210</a>.
+                    </p>
+                </div>
+
+            <Footer disp="flex" />
         </div>
     )
 }

@@ -212,3 +212,62 @@
 .urbanist-thinIt{
     font-family: 'urbanist-thinIt', sans-serif !important;
 }
+
+
+/* Outfit font */
+@font-face {
+    font-family: 'outfit-thin';
+    src: url('../fonts/Outfit-Thin.ttf');
+}
+@font-face {
+    font-family: 'outfit-extralight';
+    src: url('../fonts/Outfit-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'outfit-light';
+    src: url('../fonts/Outfit-Light.ttf');
+}
+@font-face {
+    font-family: 'outfit-regular';
+    src: url('../fonts/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family: 'outfit-medium';
+    src: url('../fonts/Outfit-Medium.ttf');
+}
+@font-face {
+    font-family: 'outfit-semibold';
+    src: url('../fonts/Outfit-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'outfit-bold';
+    src: url('../fonts/Outfit-Bold.ttf');
+}
+@font-face {
+    font-family: 'outfit-extrabold';
+    src: url('../fonts/Outfit-ExtraBold.ttf');
+}
+.outfit-thin{
+    font-family: 'outfit-thin', sans-serif !important;
+}
+.outfit-extralight{
+    font-family: 'outfit-extralight', sans-serif !important;
+}
+.outfit-light{
+    font-family: 'outfit-light', sans-serif !important;
+}
+.outfit-regular{
+    font-family: 'outfit-regular', sans-serif !important;
+}
+.outfit-medium{
+    font-family: 'outfit-medium', sans-serif !important;
+}
+.outfit-semibold{
+    font-family: 'outfit-semibold', sans-serif !important;
+}
+.outfit-bold{
+    font-family: 'outfit-bold', sans-serif !important;
+}
+.outfit-extrabold{
+    font-family: 'outfit-extrabold', sans-serif !important;
+}
