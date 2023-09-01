@@ -160,12 +160,7 @@ function Home() {
                     Welcome to Car On Rent
                 </p>
                 <p className="aboutTxt mt-2 text-muted mb-0 outfit-semibold">
-                    Welcome to CarOnRent.co - Your Premier Luxury Car Rental Service in Mumbai. We specialize in providing top-notch luxury and sports cars for rent, allowing you to elevate your driving experience and make a statement wherever you go. <br /><br />
-                    The Ultimate Guide to Luxury Car Rentals in Mumbai
-                    Explore the perks of renting a luxury car in Mumbai and how it can transform your driving experience. <br /><br />
-
-                    Top 5 Exotic Cars You Can Rent in Mumbai
-                    Showcase the most sought-after exotic cars available for rent, highlighting their features and performance.
+                    Welcome to CarOnRent.co - Your Premier Luxury Car Rental Service in Mumbai. We specialize in providing top-notch luxury and sports cars for rent, allowing you to elevate your driving experience and make a statement wherever you go.
                 </p>
             </div>
 
@@ -248,7 +243,7 @@ function Home() {
                     </div>
                     <div className="serviceCard text-center mb-4">
                         <div className="serviceImg mx-auto">
-                            <img src="./images/Luxury with driver.png" className='img-fluid' alt="car icon" />
+                            <img src="./images/Luxury with driver.png" className='img-fluid p-3 pt-2 pb-0' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
                             <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Luxury Car Rentals with Driver</p>
