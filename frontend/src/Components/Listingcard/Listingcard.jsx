@@ -26,7 +26,7 @@ function Listingcard(props) {
                     <span className="priceSpan text-muted">8 hrs 80 kms</span>
                 </p>
                 <Link to={`/${props.category}/${props.name}`} className='nav-link'>
-                <button className="listingCardBtn btn btn-primary mt-3 py-1 px-4 ">
+                <button className="listingCardBtn btn bg-brand2 text-white mt-3 py-1 px-4 ">
                     View Details
                 </button>
                 </Link>

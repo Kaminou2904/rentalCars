@@ -7,6 +7,8 @@ import Data from '../../Data/Cars.json';
 function Detail() {
 
     const navigate = useNavigate();
+    const [dateval, setDateval] = useState(1);
+    // const days = 'Day';
     const [fairdisplay, setFairdisplay] = useState('inline-block');
     const [crossdisplay, setCrossdisplay] = useState('none');
     const [popup, setPopup] = useState('60px');
@@ -26,51 +28,51 @@ function Detail() {
     console.log(foundData);
 
     const eightX = foundData.price * 8;
-    let total = (eightX) + tripfair + damage + coven;
+    let total = (eightX * dateval) + tripfair + damage + coven;
 
-    const localData = JSON.parse(localStorage.getItem('form'));
+    // const localData = JSON.parse(localStorage.getItem('form'));
 
-    const date = new Date();
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const month = months[date.getMonth()];
+    // const date = new Date();
+    // const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    // const month = months[date.getMonth()];
 
-    let dateNum = 1;
-    let dateS = date.getDate() + " " + month;
-    let dateE = date.getDate() + " " + month;
+    // let dateNum = 1;
+    // let dateS = date.getDate() + " " + month;
+    // let dateE = date.getDate() + " " + month;
 
-    const convertoMilli = (dateString) => {
-        const [cDate, cMonth] = dateString.split(' ');
-        const monthIndex = months.indexOf(cMonth)
+    // const convertoMilli = (dateString) => {
+    //     const [cDate, cMonth] = dateString.split(' ');
+    //     const monthIndex = months.indexOf(cMonth)
 
-        if (cDate && monthIndex !== -1) {
-            const currentDate = new Date();
-            currentDate.setDate(parseInt(cDate, 10));
-            currentDate.setMonth(monthIndex);
-            return currentDate.getTime();
-        }
-        return 'invalid date'
-    }
+    //     if (cDate && monthIndex !== -1) {
+    //         const currentDate = new Date();
+    //         currentDate.setDate(parseInt(cDate, 10));
+    //         currentDate.setMonth(monthIndex);
+    //         return currentDate.getTime();
+    //     }
+    //     return 'invalid date'
+    // }
 
-    if (localData) {
-        const startMilli = convertoMilli(localData.start);
-        const endMilli = convertoMilli(localData.end);
+    // if (localData) {
+    //     const startMilli = convertoMilli(localData.start);
+    //     const endMilli = convertoMilli(localData.end);
 
-        if (startMilli !== 'invalid date' && endMilli !== 'invalid date') {
-            const dateDifference = endMilli - startMilli;
+    //     if (startMilli !== 'invalid date' && endMilli !== 'invalid date') {
+    //         const dateDifference = endMilli - startMilli;
 
-            // Convert milliseconds to days (86400,000 milliseconds in a day)
-            const dateDifferenceInDays = Math.abs(dateDifference) / 86400000;
-            dateNum = dateDifferenceInDays
+    //         // Convert milliseconds to days (86400,000 milliseconds in a day)
+    //         const dateDifferenceInDays = Math.abs(dateDifference) / 86400000;
+    //         dateNum = dateDifferenceInDays
 
-            total = (eightX * dateDifferenceInDays) + tripfair + damage + coven;
-        }
-    }
+    //         total = (eightX * dateDifferenceInDays) + tripfair + damage + coven;
+    //     }
+    // }
 
-    if (localStorage.length !== 0) {
-        dateS = localData.start;
-        dateE = localData.end;
-        total = (eightX * Math.abs(dateNum)) + tripfair + damage + coven;
-    }
+    // if (localStorage.length !== 0) {
+    //     dateS = localData.start;
+    //     dateE = localData.end;
+    //     total = (eightX * Math.abs(dateNum)) + tripfair + damage + coven;
+    // }
 
     return (
         <div className='mainDetail'>
@@ -127,7 +129,15 @@ function Detail() {
                 </div>
             </div>
 
-            <div className="bookingDetail container mt-4">
+            <div className="DaysDiv container mt-4">
+                <p className="bookingHead outfit-bold mb-0 fs-5">Select Days</p>
+                <div className="mb-0 d-flex justify-content-center px-2 align-items-center">
+                    <p className="numholder mb-0 text-muted outfit-bold text-uppercase fs-5">{dateval > 1 ? `${dateval} Days` : `${dateval} Day`}</p>
+                </div>
+                <input type="range" className="form-range" min="1" max="10" value={dateval} onChange={(e)=> setDateval(e.target.value)}  id="customRange2"></input>
+            </div>
+
+            {/* <div className="bookingDetail container mt-4">
                 <p className="bookingHead outfit-bold mb-0 fs-5">Booking Time</p>
                 <div className="bookingWrap mt-1">
                     <div className="bookingCard bg-brand br2 p-3 d-flex justify-content-between align-items-center">
@@ -146,7 +156,7 @@ function Detail() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="aboutCarDiv container mt-4">
                 <p className="aboutHead outfit-bold mb-0 fs-5">About the car</p>
@@ -156,10 +166,10 @@ function Detail() {
                 <div className="carFeatures">
                     <ul className='carFeatUl p-3 bg-light br3 mt-2'>
                         <li className='carFeatLi outfit-semibold fs-4'>Features</li>
-                        <li className='carFeatLi outfit-medium'><i className="fas fa-voicemail me-2 text-primary"></i>Voice Control</li>
-                        <li className='carFeatLi outfit-medium'><i className="fas fa-music me-2 text-primary"></i>Music System</li>
-                        <li className='carFeatLi outfit-medium'><i className="fas fa-gamepad me-2 text-primary"></i>Cruise Control</li>
-                        <li className='carFeatLi outfit-medium'><i className="fas fa-mouse me-2 text-primary"></i>Push Button Start</li>
+                        <li className='carFeatLi outfit-medium'><i className="fas fa-voicemail me-2 brand-color"></i>Voice Control</li>
+                        <li className='carFeatLi outfit-medium'><i className="fas fa-music me-2 brand-color"></i>Music System</li>
+                        <li className='carFeatLi outfit-medium'><i className="fas fa-gamepad me-2 brand-color"></i>Cruise Control</li>
+                        <li className='carFeatLi outfit-medium'><i className="fas fa-mouse me-2 brand-color"></i>Push Button Start</li>
                     </ul>
                 </div>
             </div>
@@ -168,7 +178,7 @@ function Detail() {
                 <div className="policyWrap">
                     <div className="policyCard bg-brand mb-2 p-3 py-2">
                         <p className="policyCardHead outfit-semibold fs-5 mb-0">
-                            <i className="fas fa-user-shield me-2 text-primary"></i>Saftey First
+                            <i className="fas fa-user-shield me-2 brand-color"></i>Saftey First
                         </p>
                         <p className="policyTxt text-muted mb-0">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reiciendis, quidem suscipit nulla dicta dolore.
@@ -176,7 +186,7 @@ function Detail() {
                     </div>
                     <div className="policyCard bg-brand mb-2 p-3 py-2">
                         <p className="policyCardHead outfit-semibold fs-5 mb-0">
-                            <i className="fas fa-user-shield me-2 text-primary"></i>Saftey First
+                            <i className="fas fa-user-shield me-2 brand-color"></i>Saftey First
                         </p>
                         <p className="policyTxt text-muted mb-0">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reiciendis, quidem suscipit nulla dicta dolore.
@@ -184,7 +194,7 @@ function Detail() {
                     </div>
                     <div className="policyCard bg-brand mb-2 p-3 py-2">
                         <p className="policyCardHead outfit-semibold fs-5 mb-0">
-                            <i className="fas fa-user-shield me-2 text-primary"></i>Saftey First
+                            <i className="fas fa-user-shield me-2 brand-color"></i>Saftey First
                         </p>
                         <p className="policyTxt text-muted mb-0">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reiciendis, quidem suscipit nulla dicta dolore.
@@ -198,7 +208,7 @@ function Detail() {
                     <div className="popup">
                         <div className="popupWrap px-3" style={{ height: popup }}>
                             <p className="actionTxt text-muted mb-0" style={{ display: fairdisplay }}>Tap to see the FAIR Summary</p>
-                            <div className="mainPrice mb-0 outfit-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹{total} <span className="mainpriceSpan text-primary text-uppercase outfit-bold ms-auto fs-5" style={{ display: fairdisplay }} onClick={() => {
+                            <div className="mainPrice mb-0 outfit-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹{total} <span className="mainpriceSpan brand-color text-uppercase outfit-bold ms-auto fs-5" style={{ display: fairdisplay }} onClick={() => {
                                 setFairdisplay('none');
                                 setCrossdisplay('inline-block');
                                 setPopup('60vh');
@@ -235,7 +245,7 @@ function Detail() {
                         </div>
                         </div>
                     </div>
-                    <div className="floatBtn w-100 btn btn-primary rounded-3 mb-1 fs-5 text-uppercase outfit-bold mt-2"
+                    <div className="floatBtn w-100 btn bg-brand2 text-white rounded-3 mb-1 fs-5 text-uppercase outfit-bold mt-2"
                         onClick={()=>{setNumpopup('block')}}
                     >
                         Continue

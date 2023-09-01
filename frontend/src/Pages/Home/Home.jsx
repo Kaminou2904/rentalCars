@@ -4,16 +4,16 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './Home.css';
 import Featurecard from '../../Components/Featurecard/Featurecard';
 import Bannercard from '../../Components/Bannercard/Bannercard';
-import Happycard from '../../Components/Happycard/Happycard';
+// import Happycard from '../../Components/Happycard/Happycard';
 import Listingcard from '../../Components/Listingcard/Listingcard';
 import Basiccard from '../../Components/Basiccard/Basiccard';
 import Footer from '../../Components/Footer/Footer';
 import Data from '../../Data/Cars.json';
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function Home() {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     // const [selectedDate, setSelectedDate] = useState(new Date());
     // const [selectedDatee, setSelectedDatee] = useState(new Date());
     // const [showSDate, setShowSDate] = useState(false);
@@ -21,7 +21,7 @@ function Home() {
     // const [showEDate, setEhowSDate] = useState(false);
     // const [datepickere, setDatepickere] = useState(false);
     // const [activeMainTab, setActiveMainTab] = useState(0);
-    // const formData = {};
+    const formData = {};
     const [dropTxt, setdropTxt] = useState('Luxury');
 
     // const startDateClick = () => {
@@ -56,15 +56,15 @@ function Home() {
     // }
 
 
-    // const searchFunc = () => {
+    const searchFunc = () => {
     //     formData.start = dateFormatingFunc(selectedDate);
     //     formData.end = dateFormatingFunc(selectedDatee);
-    //     formData.category = document.querySelector('.activeMainTab').innerText.toLowerCase();
+        formData.category = document.querySelector('.DropBtn').innerText.toLowerCase();
     //     formData.location = 'mumbai';
-    //     const StringData = JSON.stringify(formData)
-    //     localStorage.setItem('form', StringData);
-    //     navigate(`${formData.category}`);
-    // }
+        const StringData = JSON.stringify(formData)
+        localStorage.setItem('form', StringData);
+        navigate(`${formData.category}`);
+    }
 
     return (
         <div className='main' id='home'>
@@ -87,8 +87,8 @@ function Home() {
                                     <div className={`mainTab outfit-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Sports</div>
                                 </div>
                     </div> */}
-                            <p className="mb-0 outfit-regular text-white lh-sm px-2">Experience Luxury Driving <br /> in Mumbai with <span className="text-primary outfit-bold">Caronrent.co</span></p>
-                            <button className="exploreBtn btn btn-primary fs-6 rounded-pill mt-2 px-4 mb-3 mx-2">EXPLORE CARS</button>
+                            <p className="mb-0 outfit-regular text-white lh-sm px-2">Experience Luxury Driving <br /> in Mumbai with <span className="brand-color outfit-bold">Caronrent.co</span></p>
+                            <button className="exploreBtn btn bg-brand2 text-white fs-6 rounded-pill mt-2 px-4 mb-3 mx-2">EXPLORE CARS</button>
                         </div>
                     </div>
                     <div className="form br1 p-0 px-3 mt-0 ">
@@ -99,7 +99,7 @@ function Home() {
                                         <p className="locationPara mb-0 outfit-semibold"><i className="fas fa-map-marker-alt text-white me-2"></i>Mumbai</p>
                                     </div>
                                     <div className="dropdown tabs rounded-3">
-                                        <button className="btn w-100 dropdown-toggle text-white outfit-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button className="DropBtn btn w-100 dropdown-toggle text-white outfit-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {dropTxt}
                                         </button>
                                         <ul className="dropdown-menu">
@@ -109,7 +109,7 @@ function Home() {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="searchIcon px-2">
+                                <div className="searchIcon px-2" onClick={searchFunc}>
                                     <p className="searchPara mb-0 text-white"><i className="fas fa-search fs-4"></i></p>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@ function Home() {
             </div>
 
             <div className="aboutDiv container mt-5" id="about">
-                <p className="aboutHead mb-0 text-primary fs-4 outfit-bold mb-0 pt-2">
+                <p className="aboutHead mb-0 brand-color fs-4 outfit-bold mb-0 pt-2">
                     Welcome to Car On Rent
                 </p>
                 <p className="aboutTxt mt-2 text-muted mb-0 outfit-semibold">
@@ -160,9 +160,8 @@ function Home() {
                 </p>
             </div>
 
-            <div className="mainBody pt-1 mt-5 pb-5">
-                <div id='cars' className="basicCars container">
-                    <p className="basicCarHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-3">
+            <div id='cars' className="basicCars container">
+                    <p className="basicCarHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
                         Our Luxury Cars
                     </p>
                     <div className="basicCardWraper wraper">
@@ -177,7 +176,7 @@ function Home() {
                 </div>
 
                 <div className="listings container">
-                    <p className="listingHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
+                    <p className="listingHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
                         Our Basic Cars
                     </p>
                     <div className="listingWraper">
@@ -192,7 +191,7 @@ function Home() {
 
 
                 <div className="banner container">
-                    <p className="bannerHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
+                    <p className="bannerHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
                         Our Loved Ones
                     </p>
                     <div className="bannerWraper">
@@ -204,8 +203,11 @@ function Home() {
                     </div>
                 </div>
 
+            <div className="mainBody pt-1 mt-5 pb-3">
+                
+
                 <div className="ourServiceDiv container">
-                    <p className="servicesHead mb-5 text-secondary fs-4 outfit-bold mb-1 mt-5 text-center">
+                    <p className="servicesHead mb-5 text-secondary fs-4 outfit-bold mb-1 mt-3 text-center">
                         Discover Our Services
                     </p>
                     <div className="serviceCard text-center mb-4">
@@ -213,7 +215,7 @@ function Home() {
                             <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
-                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Luxury Car Rentals</p>
+                            <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Luxury Car Rentals</p>
                             <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Cruise the city in style with our exquisite selection of luxury vehicles.</p>
                         </div>
                     </div>
@@ -222,7 +224,7 @@ function Home() {
                             <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
-                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Sports Cars on Rent</p>
+                            <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Sports Cars on Rent</p>
                             <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Feel the thrill of high-performance driving with our range of sports cars.</p>
                         </div>
                     </div>
@@ -231,7 +233,7 @@ function Home() {
                             <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
-                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Convertible Car Rentals</p>
+                            <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Convertible Car Rentals</p>
                             <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Experience open-top driving and enjoy the beauty of Mumbai.</p>
                         </div>
                     </div>
@@ -240,7 +242,7 @@ function Home() {
                             <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
-                            <p className="serviceCardHead mb-0 fs-5 text-primary outfit-bold mt-2">Luxury Car Rentals with Driver</p>
+                            <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Luxury Car Rentals with Driver</p>
                             <p className="serviceCardPara text-muted mb-0 outfit-regular px-4 mt-2">Sit back and relax while our professional drivers take the wheel.</p>
                         </div>
                     </div>
@@ -248,8 +250,8 @@ function Home() {
 
                 <div className="why container">
                     <div className="d-flex align-items-center">
-                        <p className="whyHead mb-1 text-secondary fs-4 lh-sm outfit-bold mb-1 mt-4">
-                            Why Choose <span className="text-primary outfit-bold">Caronrent.co</span>
+                        <p className="whyHead mb-1 text-secondary fs-4 lh-sm outfit-bold mb-1 mt-5">
+                            Why Choose <span className="brand-color outfit-bold">Caronrent.co</span>
                         </p>
                         {/* <div className="whyLogo ms-2">
                             <img src="./images/CARONRENT LOGO.png" className='img-fluid' alt="logo" />
@@ -273,8 +275,8 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="faq container mt-5">
-                    <p className="happyHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
+                <div className="faq container">
+                    <p className="happyHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5 pt-2">
                         FAQs
                     </p>
                     <div className="faqWraper">
@@ -315,22 +317,10 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="happyCustomer container">
-                    <p className="happyHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-4">
-                        Happy Customers
-                    </p>
-                    <div className="happyWraper wraper">
-                        <div className="happyWrap wrap">
-                            <Happycard />
-                            <Happycard />
-                            <Happycard />
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div className="blogDiv container">
-                <p className="happyHead mb-0 text-dark fs-4 outfit-bold mb-1 mt-4">
+                <p className="happyHead mb-0 text-dark fs-4 outfit-bold mb-1 mt-5">
                     Blog Section :
                 </p>
                 <p className="blogTxt text-muted outfit-medium mb-0">Check out our latest blog posts for insights into luxury driving, the best driving routes in Mumbai, and tips for choosing the perfect luxury car for your needs.</p>
@@ -340,7 +330,7 @@ function Home() {
                             <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
                         </div>
                         <div className="blogCardTxt px-2">
-                            <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
+                            <p className="blogCardTxtPara outfit-medium mt-2 brand-color">
                                 Tips to save fuel:
                                 <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
                             </p>
@@ -351,7 +341,7 @@ function Home() {
                             <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
                         </div>
                         <div className="blogCardTxt px-2">
-                            <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
+                            <p className="blogCardTxtPara outfit-medium mt-2 brand-color">
                                 Tips to save fuel:
                                 <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
                             </p>
@@ -360,10 +350,10 @@ function Home() {
                 </div>
             </div>
 
-            <div className="contactDiv container mt-5 px-4">
-                <p className="contactHead mb-0 text-center fs-4 outfit-bold">Get In <span className="text-primary outfit-bold">Touch</span></p>
+            <div className="contactDiv container mt-5 px-4 mb-5 pt-2">
+                <p className="contactHead mb-0 text-center fs-4 outfit-bold">Get In <span className="brand-color outfit-bold">Touch</span></p>
                 <p className="contactTxt text-center">
-                    For bookings, inquiries, or assistance, don't hesitate to reach out to our dedicated team. You can email us at <a href="mailto:contact@caronrent.co" className="nav-link text-primary outfit-medium d-inline">contact@caronrent.co</a> or call us at <a href="tel:+919876543210" className="nav-link text-primary outfit-medium d-inline">9876543210</a>.
+                    For bookings, inquiries, or assistance, don't hesitate to reach out to our dedicated team. You can email us at <a href="mailto:contact@caronrent.co" className="nav-link brand-color outfit-medium d-inline">contact@caronrent.co</a> or call us at <a href="tel:+919876543210" className="nav-link brand-color outfit-medium d-inline">89280 60714</a>.
                 </p>
             </div>
 

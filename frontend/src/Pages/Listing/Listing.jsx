@@ -20,13 +20,13 @@ function Listing() {
             </div>
             <div className="mainRight">
                 <p className="mb-0 listingHead outfit-bold text-capitalize">{category} Cars</p>
-                <p className="headDate mb-0 text-muted">{formData.start} <span className="text-primary">{`->`}</span> {formData.end}</p>
+                <p className="headDate mb-0 text-muted">{formData.start} <span className="brand-color">{`->`}</span> {formData.end}</p>
             </div>
         </div>
         <div className="mainWrap container pt-5 mt-4">
         {
             categoryCars.map((car)=>(
-                <Listingcard category={car.category} key={car.id} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                <Listingcard category={car.category} key={car.id} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
             ))
         }
         </div>

@@ -37,7 +37,7 @@ function Basiccard(props) {
                         ₹{props.price} /Hour
                         <span className="priceSpan text-muted">8 hrs 80 kms</span>
                     </p>
-                    <Link to={`/${props.category}/${props.name}`} className='nav-link'><button className='btn btn-primary rounded-pill py-0'>View More</button></Link>
+                    <Link to={`/${props.category}/${props.name}`} className='nav-link'><button className='btn bg-brand2 text-white rounded-pill py-0'>View More</button></Link>
                 </div>
             </div>
         </div>
