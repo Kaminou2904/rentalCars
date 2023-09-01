@@ -11,6 +11,9 @@ import Footer from '../../Components/Footer/Footer';
 import Data from '../../Data/Cars.json';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 function Home() {
 
     const navigate = useNavigate();
@@ -57,10 +60,10 @@ function Home() {
 
 
     const searchFunc = () => {
-    //     formData.start = dateFormatingFunc(selectedDate);
-    //     formData.end = dateFormatingFunc(selectedDatee);
+        //     formData.start = dateFormatingFunc(selectedDate);
+        //     formData.end = dateFormatingFunc(selectedDatee);
         formData.category = document.querySelector('.DropBtn').innerText.toLowerCase();
-    //     formData.location = 'mumbai';
+        //     formData.location = 'mumbai';
         const StringData = JSON.stringify(formData)
         localStorage.setItem('form', StringData);
         navigate(`${formData.category}`);
@@ -76,20 +79,24 @@ function Home() {
                     </div>
                     {/* <p className="headerTxt text-center outfit-light">Electric Cars on Rent in India</p> */}
                     <div className="heroMain mt-4">
-                        {/* <video autoPlay muted loop playsInline className='img-fluid mt-3'>
-                        <source src='./images/Car On Rent Video.m4v'/>
-                        </video> */}
-                        <div className="hero pt-1 d-flex flex-column justify-content-end align-items-start p-4">
-                            {/* <div className="mainTabs container mt-2">
-                                <div className="mainTabWrap d-flex justify-content-around align-items-center">
-                                    <div className={`mainTab outfit-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 0 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(0)}>Basic</div>
-                                    <div className={`mainTab outfit-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 1 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(1)}>Luxury</div>
-                                    <div className={`mainTab outfit-bold text-dark bg-white p-2 br1 text-center ${activeMainTab === 2 ? 'activeMainTab' : ''}`} onClick={() => setActiveMainTab(2)}>Sports</div>
+                        <OwlCarousel className='owl-theme' items={1} dots={false} autoplay autoplayTimeout={2000} loop>
+                            <div className="item">
+                                <div className="hero pt-1 d-flex flex-column justify-content-end align-items-start p-4">
+                                    <p className="mb-0 outfit-regular text-white lh-sm px-2">Experience Luxury Driving <br /> in Mumbai with <span className="brand-color outfit-bold">Caronrent.co</span></p>
+                                    <button className="exploreBtn btn bg-brand2 text-white fs-6 rounded-pill mt-2 px-4 mb-3 mx-2 mt-4" onClick={()=> navigate('/luxury')}>EXPLORE CARS</button>
                                 </div>
-                    </div> */}
+                            </div>
+                            <div className="item">
+                                <div className="hero1 pt-1 d-flex flex-column justify-content-end align-items-start p-4">
+                                    <p className="mb-0 outfit-regular text-white lh-sm px-2">Experience Sports Car Driving <br /> in Mumbai with <span className="brand-color outfit-bold">Caronrent.co</span></p>
+                                    <button className="exploreBtn btn bg-brand2 text-white fs-6 rounded-pill mt-2 px-4 mb-3 mx-2 mt-4"  onClick={()=> navigate('/sports')}>EXPLORE CARS</button>
+                                </div>
+                            </div>
+                        </OwlCarousel>
+                        {/* <div className="hero pt-1 d-flex flex-column justify-content-end align-items-start p-4">
                             <p className="mb-0 outfit-regular text-white lh-sm px-2">Experience Luxury Driving <br /> in Mumbai with <span className="brand-color outfit-bold">Caronrent.co</span></p>
-                            <button className="exploreBtn btn bg-brand2 text-white fs-6 rounded-pill mt-2 px-4 mb-3 mx-2">EXPLORE CARS</button>
-                        </div>
+                            <button className="exploreBtn btn bg-brand2 text-white fs-6 rounded-pill mt-2 px-4 mb-3 mx-2 mt-4">EXPLORE CARS</button>
+                        </div> */}
                     </div>
                     <div className="form br1 p-0 px-3 mt-0 ">
                         <div className="formWrap">
@@ -103,9 +110,9 @@ function Home() {
                                             {dropTxt}
                                         </button>
                                         <ul className="dropdown-menu">
-                                            <li className='dropOp outfit-bold px-3' onClick={(e)=> setdropTxt(e.target.innerText)}>Luxury</li>
-                                            <li className='dropOp outfit-bold px-3' onClick={(e)=> setdropTxt(e.target.innerText)}>Sports</li>
-                                            <li className='dropOp outfit-bold px-3' onClick={(e)=> setdropTxt(e.target.innerText)}>Basic</li>
+                                            <li className='dropOp outfit-bold px-3' onClick={(e) => setdropTxt(e.target.innerText)}>Luxury</li>
+                                            <li className='dropOp outfit-bold px-3' onClick={(e) => setdropTxt(e.target.innerText)}>Sports</li>
+                                            <li className='dropOp outfit-bold px-3' onClick={(e) => setdropTxt(e.target.innerText)}>Basic</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -131,20 +138,22 @@ function Home() {
                 </div>
             </div>
 
-            <div className="basicCars container">
-                <p className="basicCarHead mb-0 fs-4 outfit-bold mb-1 mt-5">
-                    Our Sport Cars
+            <div id='cars' className="basicCars container">
+                <p className="basicCarHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
+                    Our Luxury Cars
                 </p>
                 <div className="basicCardWraper wraper">
                     <div className="basicCardWrap wrap">
                         {
-                            sportCars.map((car) => (
-                                <Basiccard key={car.id} category={car.category} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
+                            luxuryCars.map((car) => (
+                                <Basiccard key={car.id} category={car.category} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
                             ))
                         }
                     </div>
                 </div>
             </div>
+
+
 
             <div className="aboutDiv container mt-5" id="about">
                 <p className="aboutHead mb-0 brand-color fs-4 outfit-bold mb-0 pt-2">
@@ -160,51 +169,51 @@ function Home() {
                 </p>
             </div>
 
-            <div id='cars' className="basicCars container">
-                    <p className="basicCarHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
-                        Our Luxury Cars
-                    </p>
-                    <div className="basicCardWraper wraper">
-                        <div className="basicCardWrap wrap">
-                            {
-                                luxuryCars.map((car) => (
-                                    <Basiccard key={car.id} category={car.category} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
-                                ))
-                            }
-                        </div>
-                    </div>
-                </div>
-
-                <div className="listings container">
-                    <p className="listingHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
-                        Our Basic Cars
-                    </p>
-                    <div className="listingWraper">
+            <div className="basicCars container">
+                <p className="basicCarHead mb-0 fs-4 outfit-bold mb-1 mt-5">
+                    Our Sport Cars
+                </p>
+                <div className="basicCardWraper wraper">
+                    <div className="basicCardWrap wrap">
                         {
-                            basicCars.map((car) => (
-                                <Listingcard category={car.category} key={car.id} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
+                            sportCars.map((car) => (
+                                <Basiccard key={car.id} category={car.category} img={car.img} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
                             ))
                         }
                     </div>
                 </div>
+            </div>
+
+            <div className="listings container">
+                <p className="listingHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
+                    Our Basic Cars
+                </p>
+                <div className="listingWraper">
+                    {
+                        basicCars.map((car) => (
+                            <Listingcard category={car.category} key={car.id} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price} />
+                        ))
+                    }
+                </div>
+            </div>
 
 
 
-                <div className="banner container">
-                    <p className="bannerHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
-                        Our Loved Ones
-                    </p>
-                    <div className="bannerWraper">
-                        <div className="bannerWrap">
-                            <Bannercard />
-                            <Bannercard />
-                            <Bannercard />
-                        </div>
+            <div className="banner container">
+                <p className="bannerHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
+                    Our Loved Ones
+                </p>
+                <div className="bannerWraper">
+                    <div className="bannerWrap">
+                        <Bannercard />
+                        <Bannercard />
+                        <Bannercard />
                     </div>
                 </div>
+            </div>
 
             <div className="mainBody pt-1 mt-5 pb-3">
-                
+
 
                 <div className="ourServiceDiv container">
                     <p className="servicesHead mb-5 text-secondary fs-4 outfit-bold mb-1 mt-3 text-center">
@@ -212,7 +221,7 @@ function Home() {
                     </p>
                     <div className="serviceCard text-center mb-4">
                         <div className="serviceImg mx-auto">
-                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                            <img src="./images/Luxury Car Icon.png" className='img-fluid' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
                             <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Luxury Car Rentals</p>
@@ -221,7 +230,7 @@ function Home() {
                     </div>
                     <div className="serviceCard text-center mb-4">
                         <div className="serviceImg mx-auto">
-                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                            <img src="./images/Sports Car.png" className='img-fluid' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
                             <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Sports Cars on Rent</p>
@@ -230,7 +239,7 @@ function Home() {
                     </div>
                     <div className="serviceCard text-center mb-4">
                         <div className="serviceImg mx-auto">
-                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                            <img src="./images/Covertible Car Icon.png" className='img-fluid invertedImg' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
                             <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Convertible Car Rentals</p>
@@ -239,7 +248,7 @@ function Home() {
                     </div>
                     <div className="serviceCard text-center mb-4">
                         <div className="serviceImg mx-auto">
-                            <img src="https://cdn.pixabay.com/photo/2016/03/10/16/33/icons-1248706_1280.png" className='img-fluid' alt="car icon" />
+                            <img src="./images/Luxury with driver.png" className='img-fluid' alt="car icon" />
                         </div>
                         <div className="serviceCardTxt">
                             <p className="serviceCardHead mb-0 fs-5 brand-color outfit-bold mt-2">Luxury Car Rentals with Driver</p>
