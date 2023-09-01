@@ -1,5 +1,5 @@
 .featCard{
-    width: min(200px, 400px);
+    width: min(max-content, 400px);
 }
 
 .headTab{

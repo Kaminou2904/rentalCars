@@ -27,6 +27,40 @@
     line-height: 12px;
 }
 
+.locaNselWrap{
+    width: 85%;
+}
+
+.tabs{
+    width: 47%;
+    background-color: #53B7E3 !important;
+    color: white !important;
+}
+
+.cateDrop{
+    background-color: white !important;
+}
+
+.categoryDrop{
+    background-color: #53B7E3 !important;
+    color: white !important;
+}
+
+.categoriesDropCont{
+    position: absolute;
+    z-index: 15;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.dropOp{
+    cursor: pointer;
+}
+
+.dropOp:hover{
+    background-color: rgb(187, 187, 187);
+}
+
 .aboutTxt{
     font-size: 14px;
     line-height: 16px ;
@@ -66,15 +100,13 @@
     overflow-x: hidden;
 }
 
-.tab{
-    width: 30% !important;
-    height: max-content !important;
-    margin-bottom: 0px !important;
+.dateInputs{
+    border: 1px solid #53B7E3;
 }
 
-/* .dateInputs{
-    margin-top: 60px !important;
-} */
+.searchPara{
+    color: #53B7E3 !important;
+}
 
 .startDateInpu, .endDateInpu{
     outline: none;

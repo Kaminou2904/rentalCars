@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
+// import React, { useState } from 'react';
+// import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Home.css';
 import Featurecard from '../../Components/Featurecard/Featurecard';
@@ -9,34 +9,36 @@ import Listingcard from '../../Components/Listingcard/Listingcard';
 import Basiccard from '../../Components/Basiccard/Basiccard';
 import Footer from '../../Components/Footer/Footer';
 import Data from '../../Data/Cars.json';
+import { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 function Home() {
 
     // const navigate = useNavigate();
-    const [selectedDate, setSelectedDate] = useState(new Date());
-    const [selectedDatee, setSelectedDatee] = useState(new Date());
-    const [showSDate, setShowSDate] = useState(false);
-    const [datepickers, setDatepickers] = useState(false);
-    const [showEDate, setEhowSDate] = useState(false);
-    const [datepickere, setDatepickere] = useState(false);
+    // const [selectedDate, setSelectedDate] = useState(new Date());
+    // const [selectedDatee, setSelectedDatee] = useState(new Date());
+    // const [showSDate, setShowSDate] = useState(false);
+    // const [datepickers, setDatepickers] = useState(false);
+    // const [showEDate, setEhowSDate] = useState(false);
+    // const [datepickere, setDatepickere] = useState(false);
     // const [activeMainTab, setActiveMainTab] = useState(0);
     // const formData = {};
+    const [dropTxt, setdropTxt] = useState('Luxury');
 
-    const startDateClick = () => {
-        setShowSDate(true);
-        setDatepickers(true);
-        setDatepickere(false);
-    }
-    const endDateClick = () => {
-        setEhowSDate(true);
-        setDatepickers(false);
-        setDatepickere(true);
-    }
+    // const startDateClick = () => {
+    //     setShowSDate(true);
+    //     setDatepickers(true);
+    //     setDatepickere(false);
+    // }
+    // const endDateClick = () => {
+    //     setEhowSDate(true);
+    //     setDatepickers(false);
+    //     setDatepickere(true);
+    // }
 
-    const dateSonchange = (dates) => {
-        setSelectedDate(dates);
-        setDatepickers(false);
-    }
+    // const dateSonchange = (dates) => {
+    //     setSelectedDate(dates);
+    //     setDatepickers(false);
+    // }
 
     const basicCars = Data.basic;
     const luxuryCars = Data.luxury;
@@ -91,46 +93,25 @@ function Home() {
                     </div>
                     <div className="form br1 p-0 px-3 mt-0 ">
                         <div className="formWrap">
-                            <div className="dateInputs bg-brand2 rounded-3 p-2 d-flex justify-content-between align-items-center mt-4">
-                                <div className="locationTab tab mx-0 mb-0">
-                                    <p className="locationTabP w-100 py-1 mb-0 btn btn-light text-nowrap"><i className="fas fa-map-marker-alt me-1 brand-color"></i>Mumbai</p>
+                            <div className="dateInputs rounded-3 p-2 d-flex justify-content-between align-items-center mt-4">
+                                <div className="locaNselWrap d-flex align-items-center justify-content-between">
+                                    <div className="locationTab tabs bg-light rounded-3 p-2 px-3">
+                                        <p className="locationPara mb-0 outfit-semibold"><i className="fas fa-map-marker-alt text-white me-2"></i>Mumbai</p>
+                                    </div>
+                                    <div className="dropdown tabs rounded-3">
+                                        <button className="btn w-100 dropdown-toggle text-white outfit-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {dropTxt}
+                                        </button>
+                                        <ul className="dropdown-menu">
+                                            <li className='dropOp outfit-bold px-3' onClick={(e)=> setdropTxt(e.target.innerText)}>Luxury</li>
+                                            <li className='dropOp outfit-bold px-3' onClick={(e)=> setdropTxt(e.target.innerText)}>Sports</li>
+                                            <li className='dropOp outfit-bold px-3' onClick={(e)=> setdropTxt(e.target.innerText)}>Basic</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div className="startDate text-center tab">
-                                    {showSDate ? (
-                                        <DatePicker
-                                            selected={selectedDate}
-                                            onChange={dateSonchange}
-                                            minDate={new Date()}
-                                            dateFormat="dd/MM/yyyy"
-                                            showYearDropdown
-                                            scrollableMonthYearDropdown
-                                            className='startDateInpu btn btn-light border-0 rounded-3 mt-2 outfit-regular fs-6 br1 text-center'
-                                            open={datepickers}
-                                        />
-                                    ) : <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={startDateClick}>Start Date</span>
-                                    }
+                                <div className="searchIcon px-2">
+                                    <p className="searchPara mb-0 text-white"><i className="fas fa-search fs-4"></i></p>
                                 </div>
-                                <div className="endDate text-center tab">
-                                    {showEDate ? (
-                                        <DatePicker
-                                            selected={selectedDatee}
-                                            onChange={date => {
-                                                setSelectedDatee(date);
-                                                setDatepickere(false)
-                                            }}
-                                            minDate={new Date()}
-                                            dateFormat="dd/MM/yyyy"
-                                            showYearDropdown
-                                            scrollableMonthYearDropdown
-                                            open={datepickere}
-                                            className='endDateInpu btn btn-light border-0 rounded-3 mt-2 outfit-regular fs-6 br1 text-center'
-                                        />
-                                    ) : <span className='pickUpDateBtn btn btn-light fs-6 text-nowrap' onClick={endDateClick}>End Date</span>
-                                    }
-                                </div>
-                            </div>
-                            <div className="searchBtn text-center mt-2">
-                                <button className="searchBtn btn btn-primary bg-brand2 border-0 rounded-pill text-center fs-4 outfit-regular w-75">Search</button>
                             </div>
                         </div>
                     </div>
@@ -349,42 +330,42 @@ function Home() {
             </div>
 
             <div className="blogDiv container">
-                    <p className="happyHead mb-0 text-dark fs-4 outfit-bold mb-1 mt-4">
-                        Blog Section :
-                    </p>
-                    <p className="blogTxt text-muted outfit-medium mb-0">Check out our latest blog posts for insights into luxury driving, the best driving routes in Mumbai, and tips for choosing the perfect luxury car for your needs.</p>
-                    <div className="blogWrap">
-                        <div className="blogCard mt-4 px-3">
-                            <div className="blogImg">
-                                <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
-                            </div>
-                            <div className="blogCardTxt px-2">
-                                <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
-                                    Tips to save fuel: 
-                                    <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
-                                </p>
-                            </div>
+                <p className="happyHead mb-0 text-dark fs-4 outfit-bold mb-1 mt-4">
+                    Blog Section :
+                </p>
+                <p className="blogTxt text-muted outfit-medium mb-0">Check out our latest blog posts for insights into luxury driving, the best driving routes in Mumbai, and tips for choosing the perfect luxury car for your needs.</p>
+                <div className="blogWrap">
+                    <div className="blogCard mt-4 px-3">
+                        <div className="blogImg">
+                            <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
                         </div>
-                        <div className="blogCard mt-4 px-3">
-                            <div className="blogImg">
-                                <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
-                            </div>
-                            <div className="blogCardTxt px-2">
-                                <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
-                                    Tips to save fuel: 
-                                    <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
-                                </p>
-                            </div>
+                        <div className="blogCardTxt px-2">
+                            <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
+                                Tips to save fuel:
+                                <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="blogCard mt-4 px-3">
+                        <div className="blogImg">
+                            <img src="https://cdn.needacar.co.nz/mc-listing/blog/be27a1c0/tipd%20to%20save%20fuel.png?sv=2016-05-31&sr=b&si=default&sig=ijccmat1SKxYuZodFtIZ0BBDiYPghBQ2IwTrAHBPHiI%3D&se=2030-12-04T22%3A24%3A59Z" alt="" className="img-fluid br1" />
+                        </div>
+                        <div className="blogCardTxt px-2">
+                            <p className="blogCardTxtPara outfit-medium mt-2 text-primary">
+                                Tips to save fuel:
+                                <span className="text-muted outfit-light ms-2">8 Tips to save fuel while Driving...</span>
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div className="contactDiv container mt-5 px-4">
-                    <p className="contactHead mb-0 text-center fs-4 outfit-bold">Get In <span className="text-primary outfit-bold">Touch</span></p>
-                    <p className="contactTxt text-center">
-                        For bookings, inquiries, or assistance, don't hesitate to reach out to our dedicated team. You can email us at <a href="mailto:contact@caronrent.co" className="nav-link text-primary outfit-medium d-inline">contact@caronrent.co</a> or call us at <a href="tel:+919876543210" className="nav-link text-primary outfit-medium d-inline">9876543210</a>.
-                    </p>
-                </div>
+            <div className="contactDiv container mt-5 px-4">
+                <p className="contactHead mb-0 text-center fs-4 outfit-bold">Get In <span className="text-primary outfit-bold">Touch</span></p>
+                <p className="contactTxt text-center">
+                    For bookings, inquiries, or assistance, don't hesitate to reach out to our dedicated team. You can email us at <a href="mailto:contact@caronrent.co" className="nav-link text-primary outfit-medium d-inline">contact@caronrent.co</a> or call us at <a href="tel:+919876543210" className="nav-link text-primary outfit-medium d-inline">9876543210</a>.
+                </p>
+            </div>
 
             <Footer disp="flex" />
         </div>

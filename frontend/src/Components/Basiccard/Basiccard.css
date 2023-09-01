@@ -1,6 +1,6 @@
 .basicCard{
     width: min(280px, 400px);
-    background-color: rgb(208 241 253);
+    background-color: #d0f1fd;
 }
 
 .basicCardImg img{
