@@ -8,7 +8,7 @@ function Listing() {
 
     const { category } = useParams();
     const navigate = useNavigate();
-    const formData = JSON.parse(localStorage.getItem('form'));
+    // const formData = JSON.parse(localStorage.getItem('form'));
 
     const categoryCars = Data[category];
 
@@ -20,7 +20,7 @@ function Listing() {
             </div>
             <div className="mainRight">
                 <p className="mb-0 listingHead outfit-bold text-capitalize">{category} Cars</p>
-                <p className="headDate mb-0 text-muted">{formData.start} <span className="brand-color">{`->`}</span> {formData.end}</p>
+                {/* <p className="headDate mb-0 text-muted">{formData.start} <span className="brand-color">{`->`}</span> {formData.end}</p> */}
             </div>
         </div>
         <div className="mainWrap container pt-5 mt-4">
