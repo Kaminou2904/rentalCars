@@ -72,7 +72,7 @@ function Home() {
     return (
         <div className='main' id='home'>
             <div className="whatIcon rounded-circle bg-white">
-                <a href="https://wa.me/+919876543210" className="nav-link"><i className="fab fa-whatsapp fs-1" style={{color: '#25D366'}}></i></a>
+                <a href="https://wa.me/+918928060714" className="nav-link"><i className="fab fa-whatsapp fs-1" style={{color: '#25D366'}}></i></a>
             </div>
             <div className="mainHead py-2 pt-3">
                 <div className="mainHeadWrap">
