@@ -237,7 +237,7 @@ function Detail() {
                                 <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Damage Protection Fee <span className='priceLiSpan ms-auto outfit-bold'>₹599</span></li>
                                 <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Convenience Fee <span className='priceLiSpan ms-auto outfit-bold'>₹99</span></li>
                                 <li className="priceLi text-muted outfit-bold ls-2 d-flex justify-cotent-between py-2">Total Fare <span className='priceLiSpan ms-auto outfit-extrabold'>₹{total}</span></li>
-                                <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Resfunable Fee <span className='priceLiSpan ms-auto outfit-bold'>₹599</span></li>
+                                <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Refundable Fee <span className='priceLiSpan ms-auto outfit-bold'>₹599</span></li>
                                 <li className="priceLi text-muted outfit-bold ls-2 d-flex justify-cotent-between py-2">Final Fare <span className='priceLiSpan ms-auto outfit-extrabold'>₹{total}</span></li>
                             </ul>
                         </div>
