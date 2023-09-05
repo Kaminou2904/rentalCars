@@ -19,17 +19,26 @@ function Detail() {
     const { name } = useParams();
     const { category } = useParams();
     const data = Data;
-    const tripfair = 9999;
+    const dayCount = {
+        1: 'eight',
+        2: 'sixteen',
+        3: 'twenty-four',
+        4: 'thirty-two',
+        5: 'forty',
+        6: 'forty-eight',
+        7: 'fifty-six',
+        8: 'sixty-four'
+    }
+    // const tripfair = 9999;
     const damage = 599;
     const coven = 99;
 
     const cardata = data[category];
     const foundData = cardata.find(car => car.name === name);
-    console.log(foundData);
+    // console.log(foundData);
 
     const eightX = foundData.price * 8;
-    let total = (eightX * dateval) + tripfair + damage + coven;
-
+    let total = (eightX * dateval) + damage + coven;
     // const localData = JSON.parse(localStorage.getItem('form'));
 
     // const date = new Date();
@@ -208,7 +217,7 @@ function Detail() {
                     <div className="popup">
                         <div className="popupWrap px-3" style={{ height: popup }}>
                             <p className="actionTxt text-muted mb-0" style={{ display: fairdisplay }}>Tap to see the FAIR Summary</p>
-                            <div className="mainPrice mb-0 outfit-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹{total} <span className="mainpriceSpan brand-color text-uppercase outfit-bold ms-auto fs-5" style={{ display: fairdisplay }} onClick={() => {
+                            <div className="mainPrice mb-0 outfit-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹{eightX * dateval} <span className="mainpriceSpan brand-color text-uppercase outfit-bold ms-auto fs-5" style={{ display: fairdisplay }} onClick={() => {
                                 setFairdisplay('none');
                                 setCrossdisplay('inline-block');
                                 setPopup('60vh');
@@ -223,8 +232,8 @@ function Detail() {
                             }}>&times;</span></div>
                             <div className="popupTitel bg-light p-2 py-1 outfit-semibold fs-6 mt-2 text-uppercase">Fair Summary</div>
                             <ul className="priceDetails ps-0 mt-2">
-                                <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2 text-capitalize">Price for eight hours<span className='priceLiSpan ms-auto outfit-bold'>₹{eightX}</span></li>
-                                <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Trip Fair (Unlimited KMs without Fuel) <span className='priceLiSpan ms-auto outfit-bold'>₹9,999</span></li>
+                                <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2 text-capitalize">Price for {dayCount[dateval]} hours<span className='priceLiSpan ms-auto outfit-bold'>₹{eightX * dateval}</span></li>
+                                {/* <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Trip Fair (Unlimited KMs without Fuel) <span className='priceLiSpan ms-auto outfit-bold'>₹9,999</span></li> */}
                                 <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Damage Protection Fee <span className='priceLiSpan ms-auto outfit-bold'>₹599</span></li>
                                 <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Convenience Fee <span className='priceLiSpan ms-auto outfit-bold'>₹99</span></li>
                                 <li className="priceLi text-muted outfit-black ls-2 d-flex justify-cotent-between py-2">Total Fare <span className='priceLiSpan ms-auto outfit-black'>₹{total}</span></li>
