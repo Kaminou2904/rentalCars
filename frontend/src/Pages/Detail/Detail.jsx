@@ -217,7 +217,7 @@ function Detail() {
                     <div className="popup">
                         <div className="popupWrap px-3" style={{ height: popup }}>
                             <p className="actionTxt text-muted mb-0" style={{ display: fairdisplay }}>Tap to see the FAIR Summary</p>
-                            <div className="mainPrice mb-0 outfit-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹{eightX * dateval} <span className="mainpriceSpan brand-color text-uppercase outfit-bold ms-auto fs-5" style={{ display: fairdisplay }} onClick={() => {
+                            <div className="mainPrice mb-0 outfit-bold fs-4 mt-1 d-flex justify-content-betwen align-items-end">₹{total} <span className="mainpriceSpan brand-color text-uppercase outfit-bold ms-auto fs-5" style={{ display: fairdisplay }} onClick={() => {
                                 setFairdisplay('none');
                                 setCrossdisplay('inline-block');
                                 setPopup('60vh');
@@ -236,9 +236,9 @@ function Detail() {
                                 {/* <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Trip Fair (Unlimited KMs without Fuel) <span className='priceLiSpan ms-auto outfit-bold'>₹9,999</span></li> */}
                                 <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Damage Protection Fee <span className='priceLiSpan ms-auto outfit-bold'>₹599</span></li>
                                 <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Convenience Fee <span className='priceLiSpan ms-auto outfit-bold'>₹99</span></li>
-                                <li className="priceLi text-muted outfit-black ls-2 d-flex justify-cotent-between py-2">Total Fare <span className='priceLiSpan ms-auto outfit-black'>₹{total}</span></li>
-                                <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Resfunable Fee <span className='priceLiSpan ms-auto outfit-bold'>₹0</span></li>
-                                <li className="priceLi text-muted outfit-black ls-2 d-flex justify-cotent-between py-2">Final Fare <span className='priceLiSpan ms-auto outfit-black'>₹{total}</span></li>
+                                <li className="priceLi text-muted outfit-bold ls-2 d-flex justify-cotent-between py-2">Total Fare <span className='priceLiSpan ms-auto outfit-extrabold'>₹{total}</span></li>
+                                <li className="priceLi text-muted outfit-regular ls-2  d-flex justify-cotent-between py-2">Resfunable Fee <span className='priceLiSpan ms-auto outfit-bold'>₹599</span></li>
+                                <li className="priceLi text-muted outfit-bold ls-2 d-flex justify-cotent-between py-2">Final Fare <span className='priceLiSpan ms-auto outfit-extrabold'>₹{total}</span></li>
                             </ul>
                         </div>
                     </div>
