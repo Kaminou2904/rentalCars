@@ -2,6 +2,8 @@
     "basic": [
         {
             "id": 11,
+            "dsec": "Discover affordability and reliability in the Swift Dzire. Rent this compact sedan for an economical and comfortable travel experience",
+            "mainfeatures": ["Fuel-efficient", "Spacious interior", "Agile handling", "Compact design"],
             "img": "../carimg/Swift Dzire - Basic.jpg",
             "mainimg" : "../carimg/Swift Dzire - Basic.jpg",
             "name": "swift dzire",
@@ -14,6 +16,8 @@
         },
         {
             "id": 12,
+            "dsec": "Enjoy versatility and comfort with the Hyundai Xcent. Our car rental service offers a practical and stylish choice for your journey",
+            "mainfeatures": ["Spacious cabin", "Fuel-efficient", "Stylish design", "User-friendly tech"],
             "img": "../carimg/Xcent - Basic.jpg",
             "mainimg" : "../carimg/Xcent - Basic.jpg",
             "name": "Xcent",
@@ -26,6 +30,8 @@
         },
         {
             "id": 13,
+            "dsec": "Experience German engineering excellence with the Volkswagen Vento. Our car rental service offers a blend of performance, style, and sophistication",
+            "mainfeatures": ["Turbo power", "Elegant design", "Advanced tech", "Roomy interior"],
             "img": "../carimg/Vento Volkswagen -  Basic.jpg",
             "mainimg" : "../carimg/Vento Volkswagen -  Basic.jpg",
             "name": "vento volkswagen",
@@ -38,6 +44,8 @@
         },
         {
             "id": 14,
+            "dsec": "Ertiga by Suzuki: Versatile family MPV. Rent for comfort and space during your travels. A perfect blend of style and functionality",
+            "mainfeatures": ["Spacious cabin", "Seven seats", "Fuel-efficient", "Smooth ride"],
             "img": "./images/carImg.webp",
             "mainimg" : "../images/BMW X1 - Basic - 1-1.jpg",
             "name": "ertiga",
@@ -50,6 +58,8 @@
         },
         {
             "id": 15,
+            "dsec": "Discover luxury and versatility with the Innova Crysta. Rent this premium MPV for a comfortable and stylish journey with family",
+            "mainfeatures": ["Spacious interior", "Powerful engine", "Comfortable seating", "Advanced tech"],
             "img": "../carimg/Innova Crysta - Basic.jpg",
             "mainimg" : "../carimg/Innova Crysta - Basic.jpg",
             "name": "innova crysta",
@@ -62,6 +72,8 @@
         },
         {
             "id": 16,
+            "dsec": "Experience practicality and reliability in the Innova. Rent this trusted MPV for spacious comfort and dependable performance on your journeys",
+            "mainfeatures": ["Roomy interior", "Strong engine", "Comfortable seating", "Versatile design"],
             "img": "../carimg/Innova Crysta - Basic.jpg",
             "mainimg" : "../carimg/Innova Crysta - Basic.jpg",
             "name": "innova",
@@ -76,6 +88,8 @@
     "luxury": [
         {
             "id": 21,
+            "dsec": "Embrace adventure with the Toyota Fortuner. Rent this rugged SUV for off-road capability, premium comfort, and a commanding road presence",
+            "mainfeatures": ["Off-road prowess", "Luxurious interior", "Powerful engine", "Bold design"],
             "img": "../carimg/Fortuner - Luxury.jpg",
             "mainimg" : "../carimg/Fortuner - Luxury.jpg",
             "name": "toyota fortuner",
@@ -88,6 +102,8 @@
         },
         {
             "id": 22,
+            "dsec": "Elevate your travel experience with the KIA Carnival Limousine. Rent this premium minivan for spacious luxury and advanced features",
+            "mainfeatures": ["Opulent interior", "Plush seating", "Tech-loaded", "Elegant design"],
             "img": "../carimg/Kia Carnival Limozen - Luxury.jpeg",
             "mainimg" : "../carimg/Kia Carnival Limozen - Luxury.jpeg",
             "name": "KIA Carnival - limozen",
@@ -100,6 +116,8 @@
         },
         {
             "id": 23,
+            "dsec": "Indulge in automotive excellence with the Mercedes E-Class. Rent this luxury sedan for a harmonious blend of performance, style, and innovation",
+            "mainfeatures": ["Elegantly designed", "Powerful engine", "High-tech", "Comfortable interior"],
             "img": "../carimg/Mercedes E Class - Luxury.jpg",
             "mainimg" : "../carimg/Mercedes E Class - Luxury.jpg",
             "name": "Mercedes E Class",
@@ -112,6 +130,8 @@
         },
         {
             "id": 24,
+            "dsec": "Experience unparalleled luxury with the Mercedes S-Class. Rent this flagship sedan for opulence, cutting-edge technology, and a serene driving experience",
+            "mainfeatures": ["Opulent interior", "Advanced tech", "Powerful engine", "Serene ride"],
             "img": "../carimg/Mercedes S Class - Luxury.jpg",
             "mainimg" : "../carimg/Mercedes S Class - Luxury.jpg",
             "name": "Mercedes S Class",
@@ -124,6 +144,8 @@
         },
         {
             "id": 25,
+            "dsec": "Embrace sophistication with the Mercedes C-Class. Rent this compact luxury sedan for an elegant design, agile handling, and modern technology",
+            "mainfeatures": ["Elegant design", "Agile handling", "Modern tech", "Comfortable interior"],
             "img": "../carimg/Mercedes C Class - Luxury.jpg",
             "mainimg" : "../carimg/Mercedes C Class - Luxury.jpg",
             "name": "Mercedes c Class",
@@ -136,6 +158,8 @@
         },
         {
             "id": 26,
+            "dsec": "Experience unrivaled luxury and space with the Mercedes GLS. Rent this premium SUV for opulent comfort, cutting-edge technology, and commanding presence",
+            "mainfeatures": ["Spacious interior", "High-tech", "Comfortable ride", "Powerful engine"],
             "img": "../carimg/Mercedes GLS - Luxury.jpg",
             "mainimg" : "../carimg/Mercedes GLS - Luxury.jpg",
             "name": "Mercedes GLS",
@@ -148,6 +172,8 @@
         },
         {
             "id": 27,
+            "dsec": "Explore urban adventures in style with the Mercedes GLA. Rent this compact luxury SUV for agility, modernity, and an elevated driving experience",
+            "mainfeatures": ["Sporty design", "Agile handling", "High-tech", "Compact size"],
             "img": "../carimg/Mercedes GLA - Luxury.jpg",
             "mainimg" : "../carimg/Mercedes GLA - Luxury.jpg",
             "name": "Mercedes GLA",
@@ -160,6 +186,8 @@
         },
         {
             "id": 28,
+            "dsec": "Elevate group travel with the Mercedes V-Class. Rent this premium MPV for spacious comfort, luxurious appointments, and versatile transportation",
+            "mainfeatures": ["Spacious interior", "Luxurious comfort", "Versatile seating", "Advanced tech"],
             "img": "../carimg/Mercedes v Class - Luxury.jpg",
             "mainimg" : "../carimg/Mercedes v Class - Luxury.jpg",
             "name": "Mercedes V class",
@@ -172,6 +200,8 @@
         },
         {
             "id": 29,
+            "dsec": "Experience uncompromising luxury with the Mercedes-Maybach S500. Rent this exquisite sedan for opulence, precision engineering, and an extraordinary driving experience",
+            "mainfeatures": ["Opulent interior", "V8 power", "Cutting-edge tech", "Exceptional craftsmanship"],
             "img": "../carimg/Mercedes E Class - Luxury.jpg",
             "mainimg" : "../carimg/Mercedes E Class - Luxury.jpg",
             "name": "Mercedes maybach s500",
@@ -184,6 +214,8 @@
         },
         {
             "id": 210,
+            "dsec": "Drive sophistication with the BMW X1. Rent this compact luxury SUV for a blend of agility, modernity, and a spirited driving experience",
+            "mainfeatures": ["Sporty design", "Agile handling", "High-tech", "Compact size"],
             "img": "../carimg/BMW X class - Luxury.jpg",
             "mainimg" : "../carimg/BMW X class - Luxury.jpg",
             "name": "BMW X1 class",
@@ -196,6 +228,8 @@
         },
         {
             "id": 211,
+            "dsec": "Elevate your journey with the BMW X5. Rent this luxury SUV for refined style, powerful performance, and cutting-edge technology",
+            "mainfeatures": ["Refined design", "Dynamic power", "Advanced tech", "Spacious interior"],
             "img": "../carimg/BMW 5 class - Luxury.jpg",
             "mainimg" : "../carimg/BMW 5 class - Luxury.jpg",
             "name": "BMW X5 Class",
@@ -208,6 +242,8 @@
         },
         {
             "id": 212,
+            "dsec": "Experience ultimate luxury with the BMW 7 Series. Rent this flagship sedan for opulent comfort, cutting-edge technology, and unparalleled performance",
+            "mainfeatures": ["Opulent interior", "Advanced tech", "V8 power", "Comfortable ride"],
             "img": "../carimg/BMW 7 class - Luxury.jpg",
             "mainimg" : "../carimg/bmw 7 class - Luxury.jpg",
             "name": "BMW 7 series",
@@ -220,6 +256,8 @@
         },
         {
             "id": 213,
+            "dsec": "Elevate your daily drive with the BMW 3 Series. Rent this compact luxury sedan for agile performance, modernity, and style",
+            "mainfeatures": ["Sporty design", "Agile handling", "High-tech", "Spirited drive"],
             "img": "../carimg/bmw 3 class - Luxury.jpg",
             "mainimg" : "../carimg/bmw 3 class - Luxury.jpg",
             "name": "BMW 3 series",
@@ -232,6 +270,8 @@
         },
         {
             "id": 214,
+            "dsec": "Experience refinement and performance with the Audi A4. Rent this compact luxury sedan for elegant design, advanced tech, and driving pleasure",
+            "mainfeatures": ["Elegant design", "Advanced tech", "Dynamic handling", "Premium comfort"],
             "img": "../carimg/audi a class - Luxury.jpg",
             "mainimg" : "../carimg/audi a class - Luxury.jpg",
             "name": "audi a4 class",
@@ -244,6 +284,8 @@
         },
         {
             "id": 215,
+            "dsec": "Discover sophistication and power with the Audi A6. Rent this executive sedan for luxurious style, advanced technology, and dynamic performance",
+            "mainfeatures": ["Luxurious design", "Advanced tech", "Powerful engine", "Smooth ride"],
             "img": "../carimg/audi a class - Luxury.jpg",
             "mainimg" : "../carimg/audi a class - Luxury.jpg",
             "name": "audi a6 class",
@@ -256,6 +298,8 @@
         },
         {
             "id": 216,
+            "dsec": "Experience the pinnacle of luxury with the Audi A8L. Rent this flagship sedan for unmatched opulence, cutting-edge tech, and smooth performance",
+            "mainfeatures": ["Opulent interior", "Advanced tech", "Smooth ride", "Spacious cabin"],
             "img": "../carimg/audi a class - Luxury.jpg",
             "mainimg" : "../carimg/audi a class - Luxury.jpg",
             "name": "audi a8L class",
@@ -268,6 +312,8 @@
         },
         {
             "id": 217,
+            "dsec": "Explore the perfect blend of luxury and versatility with the Audi Q5. Rent this premium SUV for style, performance, and comfort",
+            "mainfeatures": ["Stylish design", "Powerful engine", "Comfortable ride", "High-tech interior"],
             "img": "../carimg/audi q class - Luxury.jpg",
             "mainimg" : "../carimg/audi q class - Luxury.jpg",
             "name": "audi q5 class",
@@ -280,6 +326,8 @@
         },
         {
             "id": 218,
+            "dsec": "Elevate your journey with the Audi Q7. Rent this premium SUV for luxurious comfort, advanced technology, and confident performance",
+            "mainfeatures": ["Luxurious interior", "Advanced tech", "Powerful engine", "Confident handling"],
             "img": "../carimg/audi q class - Luxury.jpg",
             "mainimg" : "../carimg/audi q class - Luxury.jpg",
             "name": "audi q7 class",
@@ -292,6 +340,8 @@
         },
         {
             "id": 219,
+            "dsec": "Experience British elegance with the Jaguar XF. Rent this luxury sedan for timeless style, potent performance, and cutting-edge technology",
+            "mainfeatures": ["Timeless design", "Potent power", "Advanced tech", "Refined interior"],
             "img": "../carimg/jaguar xf - Luxury.jpg",
             "mainimg" : "../carimg/jaguar xf - Luxury.jpg",
             "name": "jaguar XF",
@@ -304,6 +354,8 @@
         },
         {
             "id": 220,
+            "dsec": "Indulge in ultimate luxury with the Jaguar XJL. Rent this flagship sedan for opulent comfort, exceptional craftsmanship, and powerful performance",
+            "mainfeatures": ["Opulent interior", "Powerful engine", "Exceptional craftsmanship", "Comfortable ride"],
             "img": "../carimg/jaguar xjl - Luxury.jpg",
             "mainimg" : "../carimg/jaguar xjl - Luxury.jpg",
             "name": "jaguar XJL",
@@ -316,6 +368,8 @@
         },
         {
             "id": 221,
+            "dsec": "Experience luxury and space with the Toyota Vellfire. Rent this premium MPV for opulent comfort, advanced features, and a spacious interior",
+            "mainfeatures": ["Opulent interior", "Spacious cabin", "Advanced tech", "Comfortable ride"],
             "img": "../carimg/toyota wellfire - Luxury.jpg",
             "mainimg" : "../carimg/toyota wellfire - Luxury.jpg",
             "name": "Toyota wellfire",
@@ -328,6 +382,8 @@
         },
         {
             "id": 222,
+            "dsec": "Travel in comfort with the Toyota Commuter. Rent this versatile minibus for spacious seating, reliability, and efficient transportation for groups",
+            "mainfeatures": ["Spacious interior", "Reliable performance", "Seating for groups", "Efficient transport"],
             "img": "../carimg/toyota commuter - Luxury.jpg",
             "mainimg" : "../carimg/toyota commuter - Luxury.jpg",
             "name": "Toyota comuter",
@@ -340,6 +396,8 @@
         },
         {
             "id": 223,
+            "dsec": "Elevate your adventures with the Range Rover Vogue. Rent this luxury SUV for opulence, off-road capability, and iconic British design",
+            "mainfeatures": ["Opulent interior", "Off-road prowess", "Iconic design", "Powerful engine"],
             "img": "../carimg/range rover vogue - Luxury.jpg",
             "mainimg" : "../carimg/range rover vogue - Luxury.jpg",
             "name": "range rover vogue",
@@ -352,6 +410,8 @@
         },
         {
             "id": 224,
+            "dsec": "Experience modern luxury with the Range Rover Velar. Rent this stylish SUV for contemporary design, advanced tech, and impressive performance",
+            "mainfeatures": ["Stylish design", "Advanced tech", "Impressive power", "Comfortable interior"],
             "img": "../carimg/range rover velar - Luxury.jpg",
             "mainimg" : "../carimg/range rover velar - Luxury.jpg",
             "name": "range rover velar",
@@ -366,6 +426,8 @@
     "sports": [
         {
             "id": 31,
+            "dsec": "Feel the thrill of open-top driving with the Alfa Romeo Convertible. Rent this Italian masterpiece for style, performance, and excitement",
+            "mainfeatures": ["Stylish design", "Powerful engine", "Open-top experience", "Sporty handling"],
             "img": "../carimg/alfa romeo cmv - Sports.jpg",
             "mainimg" : "../carimg/alfa romeo cmv - Sports.jpg",
             "name": "Alfa Romeo Convertible",
@@ -378,6 +440,8 @@
         },
         {
             "id": 22,
+            "dsec": "Experience open-air elegance with the Audi A3 Cabriolet. Rent this convertible for stylish design, refined performance, and advanced technology",
+            "mainfeatures": ["Stylish design", "Turbo power", "Open-top luxury", "Advanced tech"],
             "img": "../carimg/audi a3 cabriliot - Sports.jpg",
             "mainimg" : "../carimg/audi a3 cabriliot - Sports.jpg",
             "name": "Audi A3 Cabriliot Convertible",
@@ -390,6 +454,8 @@
         },
         {
             "id": 23,
+            "dsec": "lorem",
+            "mainfeatures": ["something", "something", "something", "something"],
             "img": "../carimg/bmw z4 conv - Sports.jpg",
             "mainimg" : "../carimg/bmw z4 conv - Sports.jpg",
             "name": "BMW Z4 Convertible",
@@ -402,6 +468,8 @@
         },
         {
             "id": 24,
+            "dsec": "lorem",
+            "mainfeatures": ["something", "something", "something", "something"],
             "img": "../carimg/mini cooper conv - Sports.jpg",
             "mainimg" : "../carimg/mini cooper conv - Sports.jpg",
             "name": "mini cooper Convertible",
@@ -414,6 +482,8 @@
         },
         {
             "id": 25,
+            "dsec": "lorem",
+            "mainfeatures": ["something", "something", "something", "something"],
             "img": "../carimg/Porche panaroma Converible - Sports.jpg",
             "mainimg" : "../carimg/Porche panaroma Converible - Sports.jpg",
             "name": "Porche panaroma Convertible",
@@ -426,6 +496,8 @@
         },
         {
             "id": 26,
+            "dsec": "lorem",
+            "mainfeatures": ["something", "something", "something", "something"],
             "img": "../carimg/mercedes e53 convetible - Sports.jpg",
             "mainimg" : "../carimg/mercedes e53 convetible - Sports.jpg",
             "name": "mercedes E53 Convertible",

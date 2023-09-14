@@ -23,7 +23,7 @@ function Footer(props) {
                 </div>
                 <div className="footerCard text-center  p-2">
                     <p className="cardHead mb-0 outfit-black"><span className="nav-link"><i className="fas fa-map-marker-alt fs-1 mb-1 brand-color"></i></span></p>
-                    <p className="mb-0 footerCardP"><span className='nav-link outfit-black'>6, Mistry Chawl, Behind Madina Dairy, Jarimari, Kurla-Andheri Road, Mumbai 400072.</span></p>
+                    <p className="mb-0 footerCardP"><span className='nav-link outfit-black'>Jarimari, Kurla-Andheri Road, Mumbai 400072.</span></p>
                 </div>
                 <div className="footerCard text-center  p-2">
                     <p className="cardHead mb-0 outfit-black"><a href="mailto:caronrent.co@gmail.com" className="nav-link"><i className="fas fa-envelope fs-1 mb-1 brand-color"></i></a></p>
