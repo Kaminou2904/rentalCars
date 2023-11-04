@@ -13,17 +13,17 @@ function Listingcard(props) {
             </div>
             <div className="listingCardData ps-3 py-1">
                 <p className="listingCardName mb-0 outfit-bold text-capitalize">{props.name}</p>
-                <div className="ratingDiv">
+                {/* <div className="ratingDiv">
                     <p className="ratingP d-flex align-items-center text-muted  mb-0 p-0 m-0">
                         <span className="ratingSpan  text-center rounded-pill text-dark outfit-bold me-1 mb-0">
                             <i className="fas fa-star text-warning"></i> {props.rating}
                         </span>
                         {props.trips} Trips
                     </p>
-                </div>
+                </div> */}
                 <p className="listingCardPrice d-flex flex-column mb-0 outfit-bold">
-                    ₹{props.price} /Hour
-                    <span className="priceSpan text-muted">8 hrs 80 kms</span>
+                    8 hrs 80 kms
+                    <span className="priceSpan text-muted">Minumum</span>
                 </p>
                 <Link to={`/${props.category}/${props.name}`} className='nav-link'>
                 <button className="listingCardBtn btn bg-brand2 text-white mt-3 py-1 px-4 ">

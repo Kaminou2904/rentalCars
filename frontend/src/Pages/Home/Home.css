@@ -91,7 +91,7 @@
 }
 
 .aboutTxt{
-    font-size: 16px;
+    font-size: 17px;
     line-height: 18px ;
 }
 
@@ -192,8 +192,8 @@
 }
 
 .serviceCardPara{
-    font-size: 14px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .whyWraper{
@@ -216,8 +216,8 @@
 }
 
 .whyCardPara{
-    font-size: 14px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 17px;
     color: #9f9f9f;
 }
 
@@ -232,7 +232,59 @@
 }
 
 .contactTxt{
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 20px;
     color: gray;
+}
+.half-circle{
+    height: 60vw;
+    border-radius: 50%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 100vw;
+}
+.half-circleWrap{
+    position: absolute;
+    z-index: -1;
+}
+.carCateCard{
+    /* width: min(100%, 380px); */
+    overflow: hidden;
+}
+.carcatecardimg{
+    width: 55%;
+    margin-left: -15px;
+}
+.carcatecardtxt{
+    font-size: 26px !important;
+    line-height: 26px !important;
+    letter-spacing: -1px;
+}
+.carcatecardarr{
+    border-radius: 50% !important;
+    border: 3px solid #53B7E3 !important;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .item{
+    width: 100%;
+} */
+.owl-nav{
+    display: flex !important;
+    justify-content: flex-end;
+}
+.owl-nav button{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #53B7E3 !important;
+    border-radius: 50% !important;
+}
+.owl-dots{
+    text-align: start !important;
+    width: 60% !important;
+    -webkit-tap-highlight-color: transparent !important;
+    margin-top: -50px !important;
 }

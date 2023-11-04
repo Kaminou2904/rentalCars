@@ -1,13 +1,9 @@
 import React from 'react';
 import './Basiccard.css';
-import { Link, useNavigate } from 'react-router-dom';
 
 function Basiccard(props) {
-
-    const navigate = useNavigate();
-
     return (
-        <div className="basicCard br2 p-2 me-2" onClick={()=> navigate(`/${props.category}/${props.name}`)}>
+        <div className="basicCard br2 p-2 ">
             <div className="basicCardImg br2">
                 <img src={props.img} alt="" className="img-fluid br2" />
             </div>
@@ -23,21 +19,21 @@ function Basiccard(props) {
                             }
                         </div>
                     </div>
-                    <div className="basicRating">
+                    {/* <div className="basicRating">
                         <p className="ratingP text-nowrap d-flex align-items-center text-muted  mb-0 p-0 m-0">
                             <span className="ratingSpan  text-center rounded-pill text-dark outfit-bold me-1 mb-0">
                                 <i className="fas fa-star text-warning"></i> {props.rating}
                             </span>
                             {props.trips} Trips
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="priceWrap d-flex justify-content-between align-items-end mt-0">
                     <p className="listingCardPrice d-flex flex-column mb-0 outfit-bold">
-                        ₹{props.price} /Hour
-                        <span className="priceSpan text-muted">8 hrs 80 kms</span>
+                        8 hrs 80 kms
+                        <span className="priceSpan text-muted">Minumum Booking</span>
                     </p>
-                    <Link to={`/${props.category}/${props.name}`} className='nav-link'><button className='btn bg-brand2 text-white rounded-pill py-0'>View More</button></Link>
+                    <a href='tel:+91 89280 60714' className='nav-link'><button className='btn bg-brand2 text-white rounded-pill py-0'>Call Now</button></a>
                 </div>
             </div>
         </div>

@@ -1,8 +1,9 @@
 import React from 'react';
 import './Listing.css';
-import Listingcard from '../../Components/Listingcard/Listingcard';
 import Data from '../../Data/Cars.json'
 import { useNavigate, useParams } from 'react-router-dom';
+import Basiccard from '../../Components/Basiccard/Basiccard';
+import Footer from '../../Components/Footer/Footer';
 
 function Listing() {
 
@@ -23,13 +24,16 @@ function Listing() {
                 {/* <p className="headDate mb-0 text-muted">{formData.start} <span className="brand-color">{`->`}</span> {formData.end}</p> */}
             </div>
         </div>
-        <div className="mainWrap container pt-5 mt-4">
+        <div className="mainWrap row p-2 container mx-auto pt-5 mt-4">
         {
             categoryCars.map((car)=>(
-                <Listingcard category={car.category} key={car.id} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                <div className='col-sm-4 mb-3 p-0 px-2' key={car.id}>
+                    <Basiccard category={car.category} img={car.mainimg} name={car.name} rating={car.rating} trips={car.trips} features={car.features} price={car.price}/>
+                </div>
             ))
         }
         </div>
+        <Footer disp='none'/>
     </div>
   );
 };
