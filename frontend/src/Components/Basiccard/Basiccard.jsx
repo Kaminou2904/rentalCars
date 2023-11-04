@@ -33,7 +33,7 @@ function Basiccard(props) {
                         8 hrs 80 kms
                         <span className="priceSpan text-muted">Minumum Booking</span>
                     </p>
-                    <a href='tel:+91 89280 60714' className='nav-link'><button className='btn bg-brand2 text-white rounded-pill py-0'>Call Now</button></a>
+                    <a href='tel:+91 89280 60714' className='nav-link'><button className='btn bg-brand2 text-white rounded-pill py-0 fs-5'>Ask Price</button></a>
                 </div>
             </div>
         </div>
