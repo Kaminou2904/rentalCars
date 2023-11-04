@@ -111,12 +111,12 @@ function Home() {
                     Welcome to Car On Rent
                 </p>
                 <p className="aboutTxt mt-2 text-muted mb-0 outfit-regular">
-                    Welcome to CarOnRent.co - Your Premier Luxury Car Rental Service in Mumbai. We specialize in providing top-notch luxury and sports cars for rent, allowing you to elevate your driving experience and make a statement wherever you go.
+                    Your Premier Luxury Car Rental Service in Mumbai. We specialize in providing top-notch luxury and sports cars for rent, allowing you to elevate your driving experience and make a statement wherever you go.
                 </p>
             </div>
 
             <div id='cars' className="basicCars container">
-                <p className="basicCarHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
+                <p className="basicCarHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5 pb-2 ps-2">
                     Our Luxury Cars
                 </p>
                 <div className="basicCardWraper">
@@ -135,7 +135,7 @@ function Home() {
             </div>
 
             <div className="basicCars container">
-                <p className="basicCarHead mb-0 fs-4 outfit-bold mb-1 mt-5">
+                <p className="basicCarHead text-secondary mb-0 fs-4 outfit-bold mb-1 mt-5 pb-2 ps-2">
                     Our Sport Cars
                 </p>
                 <div className="basicCardWraper">
@@ -152,7 +152,7 @@ function Home() {
             </div>
 
             <div className="listings container">
-                <p className="listingHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
+                <p className="listingHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5 pb-2 ps-2">
                     Our Basic Cars
                 </p>
                 <div className="listingWraper">
