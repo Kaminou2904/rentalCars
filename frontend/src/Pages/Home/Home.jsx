@@ -333,7 +333,7 @@ function Home() {
             <div className="contactDiv container mt-5 px-4 mb-5 pt-2">
                 <p className="contactHead mb-0 text-center fs-4 outfit-bold">Get In <span className="brand-color outfit-bold">Touch</span></p>
                 <p className="contactTxt text-center">
-                    For bookings, inquiries, or assistance, don't hesitate to reach out to our dedicated team. You can email us at <a href="mailto:contact@caronrent.co" className="nav-link brand-color outfit-medium d-inline">contact@caronrent.co</a> or call us at <a href="tel:+919876543210" className="nav-link brand-color outfit-medium d-inline">89280 60714</a>.
+                    For bookings, inquiries, or assistance, don't hesitate to reach out to our dedicated team. You can email us at <a href="mailto:caronrent.co@gmail.com" className="nav-link brand-color outfit-medium d-inline">caronrent.co@gmail.com</a> or call us at <a href="tel:+919876543210" className="nav-link brand-color outfit-medium d-inline">89280 60714</a>.
                 </p>
             </div>
 
