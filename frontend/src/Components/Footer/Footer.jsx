@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer(props) {
   return (
@@ -10,10 +11,10 @@ function Footer(props) {
                 <img src="./images/CARONRENT LOGO.png" alt="" className="img-fluid"/>
             </div>
             <div className="quickLinks justify-content-center align-items-center pt-4" style={{display: props.disp}}>
-                <a href="#home" className="footerLink nav-link brandP outfit-black border-end px-2">Home</a>
-                <a href="#about" className="footerLink nav-link brandP outfit-black border-end px-2">About</a>
-                <a href="#cars" className="footerLink nav-link brandP outfit-black border-end px-2">Cars</a>
-                <a href="#contact" className="footerLink nav-link brandP outfit-black px-2">Contact Us</a>
+                <Link to="/" className="footerLink nav-link brandP outfit-black border-end px-2">Home</Link>
+                <Link to="/terms-and-conditions" className="footerLink nav-link brandP outfit-black border-end px-2">Terms & Conditions</Link>
+                <Link to="/privacy-policy" className="footerLink nav-link brandP outfit-black border-end px-2">Privacy Policy</Link>
+                <Link to="https://wa.me/+918928060714" className="footerLink nav-link brandP outfit-black px-2">Contact Us</Link>
             </div>
             <p className="mb-0 mt-3 text-muted jakarta-extrabold text-center">&copy; 2023 Caronrent.co</p>
             <div className="footerInfo container p-0 d-flex justify-content-center flex-wrap mt-4">

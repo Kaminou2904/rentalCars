@@ -166,8 +166,6 @@ function Home() {
                 </div>
             </div>
 
-
-
             {/* <div className="banner container">
                 <p className="bannerHead mb-0 text-secondary fs-4 outfit-bold mb-1 mt-5">
                     Our Loved Ones
