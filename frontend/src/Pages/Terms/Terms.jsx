@@ -25,7 +25,7 @@ function Terms() {
                     <div className="row align-items-center mb-3">
                         <div className="term-one col-md-6">
                             <h2 className="outfit-bold fs-5">Acceptance of Terms</h2>
-                            <p className="mb-0 outfit-medium">By accessing or using the <Link to='/' className='nav-link d-inline brand-color outfit-medium'>Caronrent</Link> website (the "Website"), you agree to comply with and be bound by these terms and conditions. If you do not agree with any part of these terms, you may not use our services.</p>
+                            <p className="mb-0 outfit-medium">By accessing or using the <Link to='/' className='nav-link d-inline brand-color outfit-medium'>Caronrent</Link> website, you agree to comply with and be bound by these terms and conditions. If you do not agree with any part of these terms, you may not use our services.</p>
                         </div>
                         <div className="col-md-6 p-5">
                             <img src="./images/ok.svg" alt="" className="img-fluid" />
